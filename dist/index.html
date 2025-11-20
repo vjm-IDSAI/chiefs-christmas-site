@@ -1,1159 +1,1107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>We Want a Chiefs Christmas — Kansas City Fundraiser Album</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>We Want a Chiefs Christmas — Kansas City Fundraiser Album</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="We Want a Chiefs Christmas is a Kansas City holiday album where every donation on GiveButter helps Rogue Round Table feed KC families and close local food gaps."
+  />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="We Want a Chiefs Christmas is a Kansas City holiday album created to help Rogue Round Table feed KC families, fill pantry gaps, and support local neighbors."
-    />
+  <!-- Open Graph for link previews -->
+  <meta property="og:title" content="We Want a Chiefs Christmas — KC Fundraiser Album" />
+  <meta
+    property="og:description"
+    content="Donate on GiveButter, get the full holiday album, and help Rogue Round Table feed Kansas City families this winter."
+  />
+  <meta
+    property="og:image"
+    content="https://chiefs.idsaikc.com/We%20Want%20A%20Chiefs%20Christmas%20Images/chiefs-album-cover-title.png?v=3"
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chiefs.idsaikc.com" />
 
-    <!-- Canonical + Open Graph for shares -->
-    <link rel="canonical" href="https://chiefs.idsaikc.com/" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="We Want a Chiefs Christmas — Kansas City Fundraiser Album"
-    />
-    <meta
-      property="og:description"
-      content="Every donation on GiveButter gets you the full We Want a Chiefs Christmas album and helps Rogue Round Table feed Kansas City families."
-    />
-    <meta
-      property="og:image"
-      content="https://chiefs.idsaikc.com/We%20Want%20A%20Chiefs%20Christmas%20Images/chiefs-album-cover-title.png?v=art2"
-    />
-    <meta property="og:image:alt" content="We Want a Chiefs Christmas album cover" />
-    <meta property="og:url" content="https://chiefs.idsaikc.com/" />
+  <style>
+    :root {
+      --bg-deep: #02071a;
+      --bg-card: #071126;
+      --bg-card-soft: #0b1630;
+      --accent-red: #e11d48;
+      --accent-gold: #fbbf24;
+      --accent-soft: #f97316;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --text-strong: #f9fafb;
+      --border-subtle: rgba(148, 163, 184, 0.35);
+      --shadow-soft: 0 30px 80px rgba(0, 0, 0, 0.75);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --max-width: 1120px;
+    }
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="We Want a Chiefs Christmas — Kansas City Fundraiser Album"
-    />
-    <meta
-      name="twitter:description"
-      content="Donate once on GiveButter, get the full We Want a Chiefs Christmas album as a thank-you, and help feed Kansas City families."
-    />
-    <meta
-      name="twitter:image"
-      content="https://chiefs.idsaikc.com/We%20Want%20A%20Chiefs%20Christmas%20Images/chiefs-album-cover-title.png?v=art2"
-    />
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <style>
-      :root {
-        --bg: #020617; /* deep navy */
-        --bg-card: #050b1f; /* lighter than background */
-        --bg-card-alt: #060f24;
-        --accent-red: #ef4444;
-        --accent-gold: #fbbf24;
-        --accent-soft: #fb923c;
-        --text-main: #e5e7eb;
-        --text-muted: #9ca3af;
-        --border-subtle: rgba(148, 163, 184, 0.3);
-        --radius-xl: 1.25rem;
-        --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
+    body {
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: radial-gradient(circle at top, #0b1630 0, #020617 52%, #000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 28px 16px 40px;
+    }
+
+    /* Snow layer */
+    #snow-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      color: #e5e7eb;
+      opacity: 0.7;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #ffffff 0, #d1d5db 40%, rgba(148, 163, 184, 0.1) 100%);
+      width: 3px;
+      height: 3px;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    .snowflake.ice {
+      background: radial-gradient(circle at 30% 30%, #f9fafb 0, #e0f2fe 45%, rgba(59, 130, 246, 0.1) 100%);
+      opacity: 0.85;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translate3d(0, -10px, 0);
       }
-
-      * {
-        box-sizing: border-box;
+      100% {
+        transform: translate3d(40px, 110vh, 0);
       }
+    }
 
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        min-height: 100%;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-          "Segoe UI", sans-serif;
-        background: radial-gradient(circle at top, #0b1220 0, #020617 45%, #020617 100%);
-        color: var(--text-main);
-      }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 16px;
+    }
 
-      body {
-        position: relative;
-        overflow-x: hidden;
-      }
+    .brand-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-      /* ============
-         Snow Layer
-         ============ */
+    .kc-heart {
+      width: 40px;
+      height: 36px;
+      background: #ffffff;
+      color: #020617;
+      font-weight: 800;
+      font-size: 16px;
+      border-radius: 999px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.08em;
+    }
 
-      .snow-layer {
-        position: fixed;
-        inset: 0;
-        overflow: hidden;
-        pointer-events: none;
-        z-index: 0; /* behind all content */
-      }
+    .kc-heart::before,
+    .kc-heart::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: #ffffff;
+      border-radius: 50%;
+      top: -14px;
+    }
 
-      .snowflake {
-        position: absolute;
-        top: -10vh;
-        border-radius: 999px;
-        background: radial-gradient(
-          circle at 30% 30%,
-          #ffffff 0,
-          #f4fbff 40%,
-          #dbeafe 70%,
-          transparent 100%
-        );
-        box-shadow: 0 0 6px rgba(255, 255, 255, 0.8),
-          0 0 12px rgba(191, 219, 254, 0.8);
-        opacity: 0.9;
-        animation-name: kc-snow-fall;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-      }
+    .kc-heart::before {
+      left: -2px;
+    }
 
-      .snowflake.small {
-        filter: hue-rotate(210deg) saturate(150%);
-        opacity: 0.7;
-      }
+    .kc-heart::after {
+      right: -2px;
+    }
 
-      .snowflake.medium {
-        filter: hue-rotate(230deg) saturate(170%);
-      }
+    .kc-heart span {
+      position: relative;
+      z-index: 1;
+    }
 
-      .snowflake.large {
-        filter: hue-rotate(250deg) saturate(190%);
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.95),
-          0 0 18px rgba(221, 239, 255, 0.95);
-      }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
 
-      @keyframes kc-snow-fall {
-        0% {
-          transform: translate3d(0, -10vh, 0);
-        }
-        100% {
-          transform: translate3d(0, 110vh, 0);
-        }
-      }
+    .brand-text .name {
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
 
-      /* ============
-         Layout
-         ============ */
+    .brand-text .tagline {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
 
+    .header-cta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn-main,
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, color 0.12s ease;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .btn-main {
+      background: linear-gradient(90deg, var(--accent-red), var(--accent-soft), var(--accent-gold));
+      box-shadow: 0 18px 45px rgba(248, 113, 113, 0.5);
+      color: #111827;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 24px 60px rgba(248, 113, 113, 0.65);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--text-main);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(30, 64, 175, 0.6);
+      border-color: rgba(129, 140, 248, 0.9);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, rgba(148, 163, 248, 0.14), transparent 50%),
+        radial-gradient(circle at bottom right, rgba(248, 113, 113, 0.16), transparent 55%),
+        var(--bg-card);
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: var(--shadow-soft);
+      padding: 22px 22px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(248, 250, 252, 0.07), transparent 60%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* HERO SECTION */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero-album {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      box-shadow: 0 18px 60px rgba(15, 23, 42, 0.9);
+      background: #020617;
+    }
+
+    .hero-album img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #e5e7eb;
+      margin-bottom: 10px;
+    }
+
+    .hero-label-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 10px #22c55e;
+    }
+
+    .hero-title {
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 800;
+      color: var(--text-strong);
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      max-width: 34rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 22px;
+      font-size: 13px;
+      color: var(--text-main);
+    }
+
+    .hero-badges span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-badges span::before {
+      content: "✓";
+      font-size: 12px;
+      color: var(--accent-gold);
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .hero-cta-note {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Section headings */
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(209, 213, 219, 0.85);
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-strong);
+      margin-bottom: 10px;
+    }
+
+    .section-body {
+      font-size: 14px;
+      color: var(--text-main);
+    }
+
+    .section-body p + p {
+      margin-top: 8px;
+    }
+
+    .bullet-list {
+      margin-top: 10px;
+      padding-left: 18px;
+      font-size: 14px;
+    }
+
+    .bullet-list li + li {
+      margin-top: 4px;
+    }
+
+    /* Two-column about layout under hero */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    /* Tracklist */
+    .tracks-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 24px;
+    }
+
+    .tracks-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .tracks-header h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-strong);
+    }
+
+    .tracks-summary {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .track-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .track-table thead th {
+      text-align: left;
+      font-weight: 500;
+      color: var(--text-muted);
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .track-table tbody tr td {
+      padding: 6px 0;
+      vertical-align: top;
+    }
+
+    .track-num {
+      width: 24px;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .track-title {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .track-notes {
+      font-size: 12px;
+      color: var(--text-muted);
+      padding-right: 8px;
+    }
+
+    .track-time {
+      width: 40px;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      color: var(--text-muted);
+    }
+
+    /* Artwork grid */
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .art-card {
+      background: var(--bg-card-soft);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .art-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .art-card-body {
+      padding: 10px 11px 11px;
+      font-size: 13px;
+    }
+
+    .art-card-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--text-strong);
+    }
+
+    .art-card-text {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* Donation CTA band */
+    .cta-band {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    .cta-band h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-strong);
+      margin-bottom: 8px;
+    }
+
+    .cta-band p {
+      font-size: 14px;
+      color: var(--text-main);
+    }
+
+    .cta-highlight {
+      background: radial-gradient(circle at top, rgba(248, 250, 252, 0.08), transparent 60%),
+        linear-gradient(90deg, var(--accent-red), var(--accent-soft), var(--accent-gold));
+      border-radius: 999px;
+      padding: 14px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 25px 70px rgba(248, 113, 113, 0.7);
+      color: #111827;
+      text-align: center;
+    }
+
+    .cta-highlight strong {
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .cta-highlight span {
+      font-size: 13px;
+    }
+
+    footer {
+      margin-top: 10px;
+      padding-top: 14px;
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: center;
+      border-top: 1px solid rgba(51, 65, 85, 0.85);
+    }
+
+    footer a {
+      color: var(--accent-gold);
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 6px;
+      margin-bottom: 4px;
+    }
+
+    footer .legal {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 3px;
+      font-size: 11px;
+    }
+
+    @media (max-width: 960px) {
       .page {
-        position: relative;
-        z-index: 1; /* above snow */
-        max-width: 1120px;
-        margin: 0 auto;
-        padding: 32px 20px 64px;
+        padding: 20px 14px 30px;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .tracks-layout,
+      .cta-band,
+      .art-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-grid {
+        gap: 18px;
+      }
+
+      .tracks-layout {
+        gap: 16px;
       }
 
       header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 32px;
-        gap: 16px;
-      }
-
-      .brand-left {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      /* KC heart logo */
-      .kc-heart-logo {
-        --heart-color: #ffffff;
-        --heart-text: #020617;
-
-        position: relative;
-        width: 40px;
-        height: 36px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 800;
-        font-size: 14px;
-        color: var(--heart-text);
-      }
-
-      .kc-heart-logo::before,
-      .kc-heart-logo::after {
-        content: "";
-        position: absolute;
-        width: 22px;
-        height: 32px;
-        background: var(--heart-color);
-        border-radius: 22px 22px 0 0;
-        top: 4px;
-        box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
-      }
-
-      .kc-heart-logo::before {
-        left: 4px;
-        transform: rotate(-45deg);
-      }
-
-      .kc-heart-logo::after {
-        right: 4px;
-        transform: rotate(45deg);
-      }
-
-      .kc-heart-logo span {
-        position: relative;
-        letter-spacing: 0.06em;
-      }
-
-      .brand-text-title {
-        font-size: 14px;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--text-muted);
-      }
-
-      .brand-text-sub {
-        font-size: 12px;
-        color: var(--text-muted);
-      }
-
-      .header-cta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .btn-primary {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 22px;
-        border-radius: 999px;
-        border: none;
-        cursor: pointer;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 14px;
-        color: #111827;
-        background-image: linear-gradient(
-          to right,
-          var(--accent-gold),
-          var(--accent-soft),
-          var(--accent-red)
-        );
-        box-shadow: 0 12px 28px rgba(248, 113, 113, 0.45);
-        white-space: nowrap;
-      }
-
-      .btn-primary:hover {
-        filter: brightness(1.08);
-        transform: translateY(-1px);
-      }
-
-      .btn-ghost {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8px 16px;
-        border-radius: 999px;
-        border: 1px solid rgba(148, 163, 184, 0.5);
-        background: rgba(15, 23, 42, 0.6);
-        color: var(--text-main);
-        text-decoration: none;
-        font-size: 13px;
-      }
-
-      main {
-        display: grid;
-        grid-template-columns: minmax(0, 2.1fr) minmax(0, 2.2fr);
-        gap: 28px;
-      }
-
-      @media (max-width: 960px) {
-        main {
-          grid-template-columns: minmax(0, 1fr);
-        }
-      }
-
-      /* Hero / description card */
-
-      .card {
-        background: radial-gradient(circle at top, #0b1220 0, var(--bg-card) 42%);
-        border-radius: var(--radius-xl);
-        padding: 22px 24px;
-        box-shadow: var(--shadow-soft);
-        border: 1px solid rgba(15, 23, 42, 0.9);
-      }
-
-      .card + .card {
-        margin-top: 20px;
-      }
-
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 4px 10px;
-        border-radius: 999px;
-        font-size: 11px;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--accent-gold);
-        background: rgba(15, 23, 42, 0.9);
-        border: 1px solid rgba(248, 250, 252, 0.06);
-      }
-
-      .badge-dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 999px;
-        background-image: radial-gradient(circle at 30% 30%, #fbbf24, #ef4444);
-        box-shadow: 0 0 9px rgba(251, 191, 36, 0.9);
-      }
-
-      h1 {
-        font-size: clamp(26px, 3vw, 32px);
-        margin: 14px 0 8px;
-      }
-
-      .subtitle {
-        font-size: 15px;
-        color: var(--text-muted);
-        max-width: 32rem;
-      }
-
-      .hero-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px 18px;
-        margin-top: 16px;
-        font-size: 12px;
-        color: var(--text-muted);
-      }
-
-      .hero-meta span {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-      }
-
-      .hero-dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 999px;
-        background: #22c55e;
-        box-shadow: 0 0 8px rgba(34, 197, 94, 0.9);
-      }
-
-      .hero-section-title {
-        font-size: 14px;
-        font-weight: 600;
-        margin-top: 18px;
-        margin-bottom: 6px;
-      }
-
-      .hero-body {
-        font-size: 14px;
-        color: var(--text-main);
-        line-height: 1.6;
-      }
-
-      .hero-body p {
-        margin: 6px 0;
-      }
-
-      .hero-body ul {
-        margin: 8px 0 4px 18px;
-        padding: 0;
-      }
-
-      .hero-body li {
-        margin-bottom: 4px;
-      }
-
-      /* Tracklist */
-
-      .tracklist-card {
-        background: var(--bg-card-alt);
-      }
-
-      .tracklist-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 12px;
-        margin-bottom: 10px;
-      }
-
-      .tracklist-header h2 {
-        font-size: 15px;
-        margin: 0;
-      }
-
-      .tracklist-header span {
-        font-size: 12px;
-        color: var(--text-muted);
-      }
-
-      .track-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 13px;
-      }
-
-      .track-table th,
-      .track-table td {
-        padding: 6px 0;
-      }
-
-      .track-table th {
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        color: var(--text-muted);
-        border-bottom: 1px solid rgba(148, 163, 184, 0.4);
-      }
-
-      .track-num {
-        width: 32px;
-        color: var(--text-muted);
-      }
-
-      .track-title {
-        color: var(--text-main);
-      }
-
-      .track-notes {
-        font-size: 12px;
-        color: var(--text-muted);
-      }
-
-      .track-time {
-        width: 42px;
-        text-align: right;
-        color: var(--text-muted);
-      }
-
-      .track-section-heading {
-        padding-top: 10px;
-        border-top: 1px solid rgba(148, 163, 184, 0.4);
-        font-size: 12px;
-        color: var(--text-muted);
-        text-transform: uppercase;
-        letter-spacing: 0.16em;
-      }
-
-      /* Artwork */
-
-      .section {
-        margin-top: 26px;
-      }
-
-      .section-title-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 10px;
-      }
-
-      .section-kicker {
-        font-size: 11px;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--accent-gold);
-      }
-
-      .section-title-row h2 {
-        font-size: 15px;
-        margin: 2px 0 0;
-      }
-
-      .art-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 16px;
-      }
-
-      @media (max-width: 880px) {
-        .art-grid {
-          grid-template-columns: minmax(0, 1fr);
-        }
-      }
-
-      .art-card {
-        background: var(--bg-card);
-        border-radius: var(--radius-xl);
-        overflow: hidden;
-        box-shadow: var(--shadow-soft);
-        border: 1px solid rgba(15, 23, 42, 0.9);
-        display: flex;
         flex-direction: column;
-        min-height: 100%;
-      }
-
-      .art-card img {
-        width: 100%;
-        display: block;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-      }
-
-      .art-card-body {
-        padding: 12px 14px 14px;
-      }
-
-      .art-card-title {
-        font-size: 13px;
-        font-weight: 600;
-        margin-bottom: 2px;
-      }
-
-      .art-card-text {
-        font-size: 12px;
-        color: var(--text-muted);
-      }
-
-      /* Donation impact card */
-
-      .impact-card {
-        margin-top: 26px;
-        background: radial-gradient(circle at top left, #111827 0, #020617 50%, #020617 100%);
-        border-radius: var(--radius-xl);
-        border: 1px solid rgba(15, 23, 42, 0.9);
-        padding: 18px 20px;
-        box-shadow: var(--shadow-soft);
-        display: grid;
-        grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.25fr);
-        gap: 16px;
-        align-items: center;
-      }
-
-      @media (max-width: 880px) {
-        .impact-card {
-          grid-template-columns: minmax(0, 1fr);
-        }
-      }
-
-      .impact-title {
-        font-size: 18px;
-        margin: 0 0 8px;
-      }
-
-      .impact-text {
-        font-size: 14px;
-        color: var(--text-main);
-        line-height: 1.6;
-      }
-
-      .impact-text ul {
-        margin: 8px 0 0 18px;
-        padding: 0;
-      }
-
-      .impact-text li {
-        margin-bottom: 3px;
-      }
-
-      .impact-cta-box {
-        background: radial-gradient(
-          circle at left,
-          rgba(248, 250, 252, 0.08),
-          rgba(15, 23, 42, 0.96)
-        );
-        border-radius: 999px;
-        padding: 10px 14px 10px 18px;
-        border: 1px solid rgba(148, 163, 184, 0.45);
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
         align-items: flex-start;
       }
 
-      @media (max-width: 880px) {
-        .impact-cta-box {
-          border-radius: var(--radius-xl);
-          align-items: stretch;
-        }
-      }
-
-      .impact-cta-label {
-        font-size: 12px;
-        color: var(--text-muted);
-      }
-
-      .impact-cta-sub {
-        font-size: 12px;
-        color: var(--text-main);
-      }
-
-      .impact-cta-box .btn-primary {
+      .header-cta {
         width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
       }
 
-      footer {
-        margin-top: 32px;
-        padding-top: 18px;
-        border-top: 1px solid rgba(30, 64, 175, 0.5);
-        font-size: 12px;
-        color: var(--text-muted);
-        text-align: center;
+      .cta-highlight {
+        border-radius: 24px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 24px;
       }
 
-      footer a {
-        color: var(--accent-gold);
-        text-decoration: none;
+      .section-title {
+        font-size: 18px;
       }
 
-      footer a:hover {
-        text-decoration: underline;
+      .card {
+        border-radius: 24px;
       }
 
-      footer .footer-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-        margin: 6px 0;
+      .kc-heart {
+        width: 34px;
+        height: 32px;
       }
-    </style>
-  </head>
+    }
+  </style>
+</head>
+<body>
+  <div id="snow-container" aria-hidden="true"></div>
 
-  <body>
-    <!-- Snow sits behind everything -->
-    <div class="snow-layer" aria-hidden="true"></div>
+  <div class="page">
+    <header>
+      <div class="brand-left">
+        <div class="kc-heart">
+          <span>KC</span>
+        </div>
+        <div class="brand-text">
+          <div class="name">Rogue Round Table</div>
+          <div class="tagline">Winter fundraiser album · Kansas City, MO</div>
+        </div>
+      </div>
+      <div class="header-cta">
+        <a class="btn-main" href="https://givebutter.com/gochiefs" target="_blank" rel="noopener noreferrer">
+          Donate &amp; Get the Album
+        </a>
+        <a
+          class="btn-ghost"
+          href="https://rogueroundtable.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn about Rogue Round Table
+        </a>
+      </div>
+    </header>
 
-    <div class="page">
-      <header>
-        <div class="brand-left">
-          <div class="kc-heart-logo" aria-label="Kansas City heart logo">
-            <span>KC</span>
+    <main>
+      <!-- HERO CARD -->
+      <section class="card">
+        <div class="card-inner hero-grid">
+          <div class="hero-album">
+            <img
+              src="We Want A Chiefs Christmas Images/chiefs-album-hero.png"
+              alt="We Want a Chiefs Christmas album art with KC holiday signs and fans"
+            />
           </div>
           <div>
-            <div class="brand-text-title">Rogue Round Table</div>
-            <div class="brand-text-sub">Winter fundraiser album · Kansas City, MO</div>
-          </div>
-        </div>
-
-        <div class="header-cta">
-          <a
-            class="btn-primary"
-            href="https://givebutter.com/gochiefs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Donate &amp; Get the Album
-          </a>
-          <a
-            class="btn-ghost"
-            href="https://rogueroundtable.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn about Rogue Round Table
-          </a>
-        </div>
-      </header>
-
-      <main>
-        <!-- LEFT: WHAT / WHY -->
-        <section>
-          <div class="card">
-            <div class="badge">
-              <span class="badge-dot"></span>
-              WE WANT A CHIEFS CHRISTMAS
+            <div class="hero-label">
+              <span class="hero-label-dot"></span>
+              <span>We Want a Chiefs Christmas</span>
             </div>
-
-            <h1>We Want a Chiefs Christmas — Kansas City Fundraiser Album</h1>
-
-            <p class="subtitle">
-              A locally made holiday album for Chiefs Kingdom. Every donation on
-              GiveButter helps Rogue Round Table feed KC families — and you get the
-              full digital album as a thank-you.
+            <h1 class="hero-title">
+              We Want a Chiefs Christmas — Kansas City Fundraiser Album
+            </h1>
+            <p class="hero-subtitle">
+              A locally made holiday album for Chiefs Kingdom. Every donation on GiveButter helps Rogue Round Table feed KC
+              families — and you get the full digital album as a thank-you.
             </p>
 
             <div class="hero-meta">
-              <span><span class="hero-dot"></span> Live now on GiveButter</span>
+              <span>Live now on GiveButter</span>
               <span>Every donation = full album download</span>
               <span>All funds stay in the Kansas City metro</span>
             </div>
 
-            <div class="hero-body">
-              <h3 class="hero-section-title">What it is</h3>
-              <p>
-                <strong>We Want a Chiefs Christmas</strong> is a 13-track holiday
-                album (plus Jazz &amp; Vault bonus tracks) created by Kansas City
-                locals in partnership with Rogue Round Table. It’s our way of saying
-                “thank you” to a community that always shows up when neighbors are
-                struggling.
-              </p>
+            <div class="hero-badges">
+              <span>13-track holiday album + Jazz session + Vault bonus tracks.</span>
+              <span>Every dollar helps fill food gaps for KC families, neighbors, and kids.</span>
+            </div>
 
-              <h3 class="hero-section-title">Why we made it</h3>
+            <div class="hero-cta-row">
+              <a class="btn-main" href="https://givebutter.com/gochiefs" target="_blank" rel="noopener noreferrer">
+                Donate &amp; Get the Album
+              </a>
+              <div class="hero-cta-note">
+                You give once on GiveButter — we send you the full digital album and use your gift to get real food into homes
+                across Kansas City.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT / WHY / HOW -->
+      <section class="card">
+        <div class="card-inner about-grid">
+          <div>
+            <div class="eyebrow">What it is</div>
+            <h2 class="section-title">A Chiefs Christmas album built to feed Kansas City</h2>
+            <div class="section-body">
               <p>
-                KC is overflowing with food drives and generosity — but frontline
-                teams are still seeing critical gaps:
+                <strong>We Want a Chiefs Christmas</strong> is a 13-track holiday album (plus Jazz &amp; Vault bonus tracks)
+                created by Kansas City locals in partnership with Rogue Round Table. It’s our way of saying “thank you” to a
+                community that always shows up when neighbors are struggling.
               </p>
-              <ul>
+              <p>
+                Every donation on GiveButter unlocks the full digital album — including all bonus tracks — as a thank-you. Every
+                dollar is then used to support KC families, pantries, and outreach teams.
+              </p>
+            </div>
+
+            <div class="eyebrow" style="margin-top:16px;">Why we made it</div>
+            <div class="section-body">
+              <p>
+                KC is overflowing with food drives and generosity — but frontline teams are still seeing critical gaps:
+              </p>
+              <ul class="bullet-list">
                 <li>Fresh food arriving spoiled or unusable.</li>
-                <li>Pantries running out of meat, dairy, and formula.</li>
+                <li>Pantries running out of meat, dairy, butter, or formula.</li>
                 <li>No soft foods for unhoused neighbors or folks without teeth.</li>
                 <li>School snack programs stretched past capacity.</li>
               </ul>
-              <p>
-                This album turns KC fandom into flexible funding so partners can buy
-                exactly what’s missing — in real time — and get it into homes the
-                same day.
-              </p>
-
-              <h3 class="hero-section-title">How it works</h3>
-              <p>
-                You donate once on GiveButter. Rogue Round Table uses those funds to
-                support KC pantries, outreach teams, and emergency needs. As a
-                thank-you, we send you the full digital album, including all bonus
-                tracks.
+              <p style="margin-top:8px;">
+                This album turns KC fandom into flexible funding so partners can buy exactly what’s missing — in real time — and
+                get it into homes the same day.
               </p>
             </div>
           </div>
 
-          <div class="card section">
-            <div class="section-title-row">
-              <div>
-                <div class="section-kicker">ABOUT THE FUNDRAISER</div>
-                <h2>Where your donation goes</h2>
-              </div>
-            </div>
-
-            <div class="hero-body">
+          <div>
+            <div class="eyebrow">How it works</div>
+            <h2 class="section-title">Simple: donate, download, feed KC</h2>
+            <div class="section-body">
               <p>
-                We work with trusted Kansas City partners to stretch every dollar
-                further, focusing on the gaps other programs can’t always cover in
-                time. Your donation helps fund:
+                1. <strong>You donate once on GiveButter.</strong>  
+                Rogue Round Table receives your gift directly and coordinates with trusted partners.
               </p>
-              <ul>
-                <li>Fresh food delivered quickly, before it spoils on shelves.</li>
-                <li>
-                  Soft foods and essentials for unhoused neighbors and seniors.
-                </li>
-                <li>Snacks and support for kids so they can focus on learning.</li>
-                <li>
-                  Micro-grants and restocks for KC pantries and outreach teams.
-                </li>
-              </ul>
               <p>
-                <strong>Every dollar stays in the KC metro area.</strong> We publish
-                updates so you can see how the album is helping families across the
-                city.
+                2. <strong>We use cash where it stretches furthest.</strong>  
+                Partners tap discounted wholesale pricing to buy fresh foods, soft foods, snacks, and essentials that typical
+                drives can’t always cover.
+              </p>
+              <p>
+                3. <strong>You get the full album free.</strong>  
+                We email you the complete digital album — all 13 main tracks plus every Jazz and Vault bonus track — as a
+                thank-you for feeding KC with us.
               </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- RIGHT: TRACKLIST -->
-        <section>
-          <div class="card tracklist-card">
-            <div class="tracklist-header">
+      <!-- TRACKLIST -->
+      <section class="card">
+        <div class="card-inner tracks-layout">
+          <div>
+            <div class="tracks-header">
               <h2>Album Tracks</h2>
-              <span>13 tracks + Jazz session + Vault</span>
+              <div class="tracks-summary">13 tracks · Jazz session + Vault</div>
             </div>
-
-            <table class="track-table">
+            <table class="track-table" aria-label="We Want a Chiefs Christmas album track list">
               <thead>
                 <tr>
-                  <th class="track-num">#</th>
+                  <th>#</th>
                   <th>Title</th>
-                  <th class="track-time">Time</th>
+                  <th>Notes</th>
+                  <th style="text-align:right;">Time</th>
                 </tr>
               </thead>
+            </table>
+            <table class="track-table" aria-hidden="true">
               <tbody>
-                <!-- 1–13: full album in order -->
+                <!-- 1–13 stay exactly in order -->
                 <tr>
                   <td class="track-num">01</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 1 — WE WANT A CHIEFS CHRISTMAS (ARROWHEAD ORIGINAL)
-                    </div>
-                    <div class="track-notes">
-                      Viral stadium-pop anthem with chantable hooks and KC swagger.
-                    </div>
+                  <td class="track-title">
+                    TRACK 1 — WE WANT A CHIEFS CHRISTMAS (ARROWHEAD ORIGINAL)
+                  </td>
+                  <td class="track-notes">
+                    Viral stadium-pop anthem with chantable hooks and KC swagger.
                   </td>
                   <td class="track-time">2:36</td>
                 </tr>
                 <tr>
                   <td class="track-num">02</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 2 — WE WANT A CHIEFS CHRISTMAS (TAILGATE EDITION)
-                    </div>
-                    <div class="track-notes">
-                      Country-rock / Southern-soul version built for grills, ribs,
-                      and backyard fire pits.
-                    </div>
+                  <td class="track-title">
+                    TRACK 2 — WE WANT A CHIEFS CHRISTMAS (TAILGATE EDITION)
+                  </td>
+                  <td class="track-notes">
+                    Country-rock / Southern-soul version built for grills, ribs, and backyard fire pits.
                   </td>
                   <td class="track-time">3:34</td>
                 </tr>
                 <tr>
                   <td class="track-num">03</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 3 — FRONT PORCH COUNTRY CHRISTMAS (KC HOME EDITION)
-                    </div>
-                    <div class="track-notes">
-                      Laid-back acoustic ballad for porch lights, blankets, and
-                      slowing down with family.
-                    </div>
+                  <td class="track-title">
+                    TRACK 3 — FRONT PORCH COUNTRY CHRISTMAS (KC HOME EDITION)
+                  </td>
+                  <td class="track-notes">
+                    Laid-back acoustic ballad for porch lights, blankets, and slowing down with family.
                   </td>
                   <td class="track-time">2:59</td>
                 </tr>
                 <tr>
                   <td class="track-num">04</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 4 — WE WANT A CHIEFS CHRISTMAS
-                      (GAME NIGHT REMIX – HYPE MODE)
-                    </div>
-                    <div class="track-notes">
-                      EDM / dance-pop remix for game nights, watch parties, and
-                      Arrowhead-level volume.
-                    </div>
+                  <td class="track-title">
+                    TRACK 4 — WE WANT A CHIEFS CHRISTMAS (GAME NIGHT REMIX — HYPE MODE)
+                  </td>
+                  <td class="track-notes">
+                    EDM / dance-pop remix for game nights, watch parties, and Arrowhead-level volume.
                   </td>
                   <td class="track-time">2:42</td>
                 </tr>
                 <tr>
                   <td class="track-num">05</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 5 — WE WANT A CHIEFS CHRISTMAS (GOSPEL-SOUL)
-                    </div>
-                    <div class="track-notes">
-                      Gospel-trap fusion with choir, organ, brass, and soaring
-                      ad-libs.
-                    </div>
+                  <td class="track-title">
+                    TRACK 5 — WE WANT A CHIEFS CHRISTMAS (GOSPEL-SOUL)
+                  </td>
+                  <td class="track-notes">
+                    Gospel-trap fusion with choir, organ, brass, and soaring vocal ad-libs.
                   </td>
                   <td class="track-time">3:04</td>
                 </tr>
                 <tr>
                   <td class="track-num">06</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 6 — WE WANT A CHIEFS CHRISTMAS (ORCHESTRAL CINEMATIC)
-                    </div>
-                    <div class="track-notes">
-                      Full orchestral version: strings, brass, timpani, and big
-                      “movie trailer” energy.
-                    </div>
+                  <td class="track-title">
+                    TRACK 6 — WE WANT A CHIEFS CHRISTMAS (ORCHESTRAL CINEMATIC)
+                  </td>
+                  <td class="track-notes">
+                    Full orchestral cinematic version — strings, brass, timpani, and big “movie trailer” energy.
                   </td>
                   <td class="track-time">5:17</td>
                 </tr>
                 <tr>
                   <td class="track-num">07</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 7 — WE WANT A CHIEFS CHRISTMAS (R&amp;B DIVA BALLAD)
-                    </div>
-                    <div class="track-notes">
-                      Smooth R&amp;B-soul groove with warm bass and Rhodes piano.
-                    </div>
+                  <td class="track-title">
+                    TRACK 7 — WE WANT A CHIEFS CHRISTMAS (R&amp;B DIVA BALLAD)
+                  </td>
+                  <td class="track-notes">
+                    Smooth R&amp;B-soul vocal version with warm bass and Rhodes piano.
                   </td>
                   <td class="track-time">3:52</td>
                 </tr>
                 <tr>
                   <td class="track-num">08</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 8 — WE WANT A CHIEFS CHRISTMAS
-                      (KIDS CLUB MIX – STADIUM EDITION)
-                    </div>
-                    <div class="track-notes">
-                      Upbeat pop-dance mix built for kids, families, and hallway
-                      dance parties.
-                    </div>
+                  <td class="track-title">
+                    TRACK 8 — WE WANT A CHIEFS CHRISTMAS (KIDS CLUB MIX – STADIUM EDITION)
+                  </td>
+                  <td class="track-notes">
+                    Upbeat pop-dance track built for kids, families, and hallway dance parties.
                   </td>
                   <td class="track-time">1:36</td>
                 </tr>
                 <tr>
                   <td class="track-num">09</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 9 — WE WANT A CHIEFS CHRISTMAS
-                      (KIDS CLUB MIX – PLAYTIME EDITION)
-                    </div>
-                    <div class="track-notes">
-                      Bright, bouncy version for car rides, coloring time, and
-                      snow-day chaos.
-                    </div>
+                  <td class="track-title">
+                    TRACK 9 — WE WANT A CHIEFS CHRISTMAS (KIDS CLUB MIX – PLAYTIME EDITION)
+                  </td>
+                  <td class="track-notes">
+                    Bright, bouncy version for car rides, coloring time, and snow-day chaos.
                   </td>
                   <td class="track-time">1:24</td>
                 </tr>
                 <tr>
                   <td class="track-num">10</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 10 — SWINGIN’ WITH SANTA &amp; THE KC WOLF
-                      (KIDS CLUB – KC JAZZ)
-                    </div>
-                    <div class="track-notes">
-                      Kid-friendly swing jazz with upright bass, brushes, piano,
-                      horns, and children’s chorus.
-                    </div>
+                  <td class="track-title">
+                    TRACK 10 — SWINGIN’ WITH SANTA &amp; THE KC WOLF (KIDS CLUB – KC JAZZ)
+                  </td>
+                  <td class="track-notes">
+                    Kid-friendly swing jazz with upright bass, brushes, piano, horns, and children’s chorus.
                   </td>
                   <td class="track-time">2:21</td>
                 </tr>
                 <tr>
                   <td class="track-num">11</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 11 — WE WANT A CHIEFS CHRISTMAS
-                      (GAME NIGHT REMIX – PARTY MODE)
-                    </div>
-                    <div class="track-notes">
-                      High-energy EDM / dance-version tuned for house parties and
-                      watch parties.
-                    </div>
+                  <td class="track-title">
+                    TRACK 11 — WE WANT A CHIEFS CHRISTMAS (GAME NIGHT REMIX – PARTY MODE)
+                  </td>
+                  <td class="track-notes">
+                    High-energy EDM / dance-version tuned for house parties and watch nights.
                   </td>
                   <td class="track-time">3:07</td>
                 </tr>
                 <tr>
                   <td class="track-num">12</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 12 — WE WANT A CHIEFS CHRISTMAS (HARD TRAP MELODY)
-                    </div>
-                    <div class="track-notes">
-                      Hard-hitting trap anthem with cinematic brass hits, 808s,
-                      and rolling hi-hats.
-                    </div>
+                  <td class="track-title">
+                    TRACK 12 — WE WANT A CHIEFS CHRISTMAS (HARD TRAP MELODY)
+                  </td>
+                  <td class="track-notes">
+                    Hard-hitting trap rendition with cinematic brass hits, 808s, and rolling hi-hats.
                   </td>
                   <td class="track-time">2:48</td>
                 </tr>
                 <tr>
                   <td class="track-num">13</td>
-                  <td>
-                    <div class="track-title">
-                      TRACK 13 — KC CHRISTMAS (ALL-IN FINALE MEDLEY)
-                    </div>
-                    <div class="track-notes">
-                      Hybrid cinematic finale — strings, brass, live drums, and
-                      choir — all roads lead back to the Kingdom.
-                    </div>
+                  <td class="track-title">
+                    TRACK 13 — KC CHRISTMAS (ALL-IN FINALE MEDLEY)
+                  </td>
+                  <td class="track-notes">
+                    Hybrid cinematic finale — strings, brass, live drums, and choir — all roads lead back to the Kingdom.
                   </td>
                   <td class="track-time">3:12</td>
                 </tr>
+              </tbody>
+            </table>
+          </div>
 
-                <!-- Jazz bonus section -->
+          <div>
+            <div class="tracks-header">
+              <h2>Jazz Session &amp; Vault Bonus Tracks</h2>
+            </div>
+            <table class="track-table">
+              <tbody>
                 <tr>
-                  <td colspan="3" class="track-section-heading">
-                    Bonus Jazz Session (J1–J4)
-                  </td>
-                </tr>
-                <tr>
-                  <td class="track-num">J1</td>
-                  <td>
-                    <div class="track-title">
-                      BONUS J1 — WE WANT A CHIEFS CHRISTMAS (KC JAZZ ORCHESTRA)
-                    </div>
-                    <div class="track-notes">
-                      Classic KC big-band swing arrangement with full horn section
-                      in the Count Basie tradition.
-                    </div>
+                  <td class="track-num">B1</td>
+                  <td class="track-title">BONUS J1 – WE WANT A CHIEFS CHRISTMAS (KC JAZZ ORCHESTRA)</td>
+                  <td class="track-notes">
+                    Classic KC big-band swing arrangement inspired by Count Basie and Bennie Moten, with full horn section and
+                    rhythm section.
                   </td>
                   <td class="track-time">2:29</td>
                 </tr>
                 <tr>
-                  <td class="track-num">J2</td>
-                  <td>
-                    <div class="track-title">
-                      BONUS J2 — WE WANT A CHIEFS CHRISTMAS (12-BAR BLUES JAM)
-                    </div>
-                    <div class="track-notes">
-                      18th &amp; Vine-style blues groove with guitar, organ, horn
-                      riffs, and harmonica.
-                    </div>
+                  <td class="track-num">B2</td>
+                  <td class="track-title">BONUS J2 – WE WANT A CHIEFS CHRISTMAS (12-BAR BLUES JAM)</td>
+                  <td class="track-notes">
+                    Classic Kansas City 12-bar blues groove in the Jay McShann / Big Joe Turner tradition — guitar, organ,
+                    horns, and harmonica leading a loose, joyful jam.
                   </td>
                   <td class="track-time">3:01</td>
                 </tr>
                 <tr>
-                  <td class="track-num">J3</td>
-                  <td>
-                    <div class="track-title">
-                      BONUS J3 — WE WANT A CHIEFS CHRISTMAS (PLAZA LOUNGE TRIO)
-                    </div>
-                    <div class="track-notes">
-                      Piano, upright bass, brush kit, and tenor sax with a light
-                      scat section.
-                    </div>
+                  <td class="track-num">B3</td>
+                  <td class="track-title">BONUS J3 – WE WANT A CHIEFS CHRISTMAS (PLAZA LOUNGE TRIO)</td>
+                  <td class="track-notes">
+                    Arranged for piano, upright bass, brush kit, and tenor sax with a light scat section and children’s chorus
+                    overlay.
                   </td>
                   <td class="track-time">2:34</td>
                 </tr>
                 <tr>
-                  <td class="track-num">J4</td>
-                  <td>
-                    <div class="track-title">
-                      BONUS J4 — WE WANT A CHIEFS CHRISTMAS (BEBOP BREAKOUT)
-                    </div>
-                    <div class="track-notes">
-                      Charlie Parker-style bebop showcase at blistering tempo,
-                      horn-trading solos, and walking bass.
-                    </div>
+                  <td class="track-num">B4</td>
+                  <td class="track-title">BONUS J4 – WE WANT A CHIEFS CHRISTMAS (BEBOP BREAKOUT)</td>
+                  <td class="track-notes">
+                    Charlie Parker-style bebop showcase with blistering tempo, horn-trading solos, walking bass, and rhythm
+                    section comping in authentic KC jazz tradition.
                   </td>
                   <td class="track-time">2:41</td>
                 </tr>
-
-                <!-- Vault section -->
-                <tr>
-                  <td colspan="3" class="track-section-heading">Vault Tracks</td>
-                </tr>
                 <tr>
                   <td class="track-num">V1</td>
-                  <td>
-                    <div class="track-title">
-                      Vault Track — It’s a KC Christmas, Royals in the Kingdom
-                    </div>
-                    <div class="track-notes">
-                      Cinematic R&amp;B-pop anthem with royal KC imagery and big
-                      sleigh-bell energy.
-                    </div>
+                  <td class="track-title">Vault Track – It’s a KC Christmas, Royals in the Kingdom</td>
+                  <td class="track-notes">
+                    Cinematic R&amp;B-pop Christmas anthem with emotional power-vocals, smooth 90s-R&amp;B bass &amp; trap-clean
+                    drums, with grand sleigh bells and strings.
                   </td>
                   <td class="track-time">3:19</td>
                 </tr>
                 <tr>
                   <td class="track-num">V2</td>
-                  <td>
-                    <div class="track-title">
-                      Vault Track — It’s a KC Christmas, Royals in the Kingdom C
-                    </div>
-                    <div class="track-notes">
-                      High-energy pop-funk version with trap-style bass drops and
-                      gospel-choir ad-libs.
-                    </div>
+                  <td class="track-title">Vault Track – It’s a KC Christmas, Royals in the Kingdom C</td>
+                  <td class="track-notes">
+                    High-energy pop-funk Christmas banger with huge horns, trap-style bass drops, gospel choir ad-libs, and
+                    sleigh bells on steroids.
                   </td>
                   <td class="track-time">3:24</td>
                 </tr>
                 <tr>
                   <td class="track-num">V3</td>
-                  <td>
-                    <div class="track-title">
-                      Vault Track — KC Christmas: Light It Up!
-                    </div>
-                    <div class="track-notes">
-                      Pop-funk Christmas banger with huge horns and KC-style hype
-                      vocals.
-                    </div>
+                  <td class="track-title">Vault Track – KC CHRISTMAS: Light it up!</td>
+                  <td class="track-notes">
+                    High-energy pop-funk Christmas banger with huge horns, trap-style bass drops, gospel choir ad-libs, and
+                    sleigh bells on steroids.
                   </td>
                   <td class="track-time">2:45</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
 
-            <p
-              style="
-                margin-top: 12px;
-                font-size: 11px;
-                color: var(--text-muted);
-                text-align: right;
-              "
-            >
-              Full album delivered with every donation through
+      <!-- ARTWORK -->
+      <section class="card">
+        <div class="card-inner">
+          <div class="eyebrow">Holiday artwork</div>
+          <h2 class="section-title">KC holiday art you can share</h2>
+          <div class="section-body">
+            <p>
+              The album comes with original Kansas City holiday artwork — built to feel like vintage storybook paintings of
+              Arrowhead, the Plaza, and the Kingdom at Christmas. Feel free to share the art to spread the word, just keep the
+              fundraiser link with it so we can keep feeding KC.
+            </p>
+          </div>
+
+          <div class="art-grid">
+            <article class="art-card">
+              <img
+                src="We Want A Chiefs Christmas Images/chiefs-album-cover-title.png"
+                alt="We Want a Chiefs Christmas album cover with KC holiday signs"
+              />
+              <div class="art-card-body">
+                <div class="art-card-title">Album Cover</div>
+                <div class="art-card-text">
+                  All the Arrowhead signs and holiday chaos in one frame.
+                </div>
+              </div>
+            </article>
+
+            <article class="art-card">
+              <img
+                src="We Want A Chiefs Christmas Images/chiefs-santa-fan.png"
+                alt="KC Santa fan in Chiefs gear with snow falling"
+              />
+              <div class="art-card-body">
+                <div class="art-card-title">KC Santa</div>
+                <div class="art-card-text">
+                  Sleigh bells, shades, and pure Kingdom holiday energy.
+                </div>
+              </div>
+            </article>
+
+            <article class="art-card">
+              <img
+                src="We Want A Chiefs Christmas Images/chiefs-wolf-sleigh.png"
+                alt="KC Wolf mascot in Santa suit riding a red quad in the snow"
+              />
+              <div class="art-card-body">
+                <div class="art-card-title">KC Wolf</div>
+                <div class="art-card-text">
+                  Delivering holiday joy — and probably a touchdown.
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- DONATION CTA / WHERE YOUR DONATION GOES -->
+      <section class="card">
+        <div class="card-inner cta-band">
+          <div>
+            <div class="eyebrow">Where your donation goes</div>
+            <h3>Cash only. KC only. Gaps only.</h3>
+            <p>
+              We work with Kansas City partners to stretch every dollar further, focusing on the gaps other programs can’t
+              always cover in time.
+            </p>
+            <ul class="bullet-list">
+              <li>Fresh food delivered quickly — before it spoils on shelves.</li>
+              <li>Soft foods and essentials for unhoused neighbors.</li>
+              <li>Snacks and support for kids so they can focus on learning, not hunger.</li>
+              <li>Micro-grants and restocks for KC pantries and outreach teams.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="cta-highlight">
+              <strong>Donate &amp; Get the Album</strong>
+              <span>
+                You give once on GiveButter — we send you the full digital album as a thank-you and turn your gift into real
+                food across Kansas City.
+              </span>
               <a
                 href="https://givebutter.com/gochiefs"
                 target="_blank"
                 rel="noopener noreferrer"
-                style="color: var(--accent-gold); text-decoration: none"
-                >givebutter.com/gochiefs</a
-              >.
-            </p>
-          </div>
-        </section>
-      </main>
-
-      <!-- HOLIDAY ARTWORK -->
-      <section class="section">
-        <div class="section-title-row">
-          <div>
-            <div class="section-kicker">HOLIDAY ARTWORK</div>
-            <h2>KC holiday art you can share</h2>
-          </div>
-          <span style="font-size: 12px; color: var(--text-muted)"
-            >Artwork created to feel like vintage storybook paintings of KC.</span
-          >
-        </div>
-
-        <div class="art-grid">
-          <article class="art-card">
-            <img
-              src="We Want A Chiefs Christmas Images/chiefs-album-cover-title.png"
-              alt="We Want a Chiefs Christmas album cover art with KC fan signs"
-            />
-            <div class="art-card-body">
-              <div class="art-card-title">Album Cover</div>
-              <div class="art-card-text">
-                All the Arrowhead signs and holiday chaos in one frame — perfect
-                for sharing the fundraiser link.
-              </div>
+                class="btn-main"
+                style="margin-top:8px;"
+              >
+                Give on GiveButter
+              </a>
             </div>
-          </article>
-
-          <article class="art-card">
-            <img
-              src="We Want A Chiefs Christmas Images/chiefs-santa-fan.png"
-              alt="KC Santa fan in red suit and Chiefs hat at a snowy stadium"
-            />
-            <div class="art-card-body">
-              <div class="art-card-title">KC Santa</div>
-              <div class="art-card-text">
-                Sleigh bells, shades, and pure Kingdom holiday energy.
-              </div>
-            </div>
-          </article>
-
-          <article class="art-card">
-            <img
-              src="We Want A Chiefs Christmas Images/chiefs-wolf-sleigh.png"
-              alt="KC Wolf in a Santa suit riding a four wheeler with a Chiefs flag"
-            />
-            <div class="art-card-body">
-              <div class="art-card-title">KC Wolf</div>
-              <div class="art-card-text">
-                Delivering holiday joy — and probably a touchdown.
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- IMPACT + CTA -->
-      <section class="impact-card">
-        <div>
-          <h2 class="impact-title">One donation. One album. Real food for KC.</h2>
-          <div class="impact-text">
-            <p>
-              When you give through GiveButter, Rogue Round Table converts your
-              gift into food, essentials, and support for families all over the
-              metro — no complicated steps, no extra hoops.
-            </p>
-            <ul>
-              <li>Every donation stays right here in Kansas City.</li>
-              <li>
-                Partners like Harvesters help stretch each dollar further through
-                wholesale pricing.
-              </li>
-              <li>
-                You’re not replacing anyone’s work — you’re reinforcing it with
-                flexible funding.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="impact-cta-box">
-          <div class="impact-cta-label">Ready to jump in?</div>
-          <a
-            class="btn-primary"
-            href="https://givebutter.com/gochiefs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Donate on GiveButter &amp; Get the Album
-          </a>
-          <div class="impact-cta-sub">
-            You give once — we send you the full digital album as a thank-you and
-            turn your gift into real food across Kansas City.
           </div>
         </div>
       </section>
@@ -1161,71 +1109,42 @@
       <footer>
         <div>Stay connected with <strong>Rogue Round Table</strong></div>
         <div class="footer-links">
-          <a href="https://rogueroundtable.com" target="_blank" rel="noopener noreferrer"
-            >rogueroundtable.com</a
-          >
-          <span>·</span>
-          <a href="https://givebutter.com/gochiefs" target="_blank" rel="noopener noreferrer"
-            >Donate on GiveButter</a
-          >
-          <span>·</span>
+          <a href="https://rogueroundtable.com" target="_blank" rel="noopener noreferrer">rogueroundtable.com</a>
+          <span>&middot;</span>
+          <a href="https://givebutter.com/gochiefs" target="_blank" rel="noopener noreferrer">Donate on GiveButter</a>
+          <span>&middot;</span>
           <span>Kansas City, MO</span>
         </div>
-        <div class="footer-links">
-          <a href="https://idsaikc.com/privacy-policy" target="_blank" rel="noopener noreferrer"
-            >Privacy Policy</a
-          >
-          <span>·</span>
-          <a href="https://idsaikc.com/terms-of-service" target="_blank" rel="noopener noreferrer"
-            >Terms of Service</a
-          >
-        </div>
-        <div style="margin-top: 6px">
+        <div>
           Let’s feed KC — and have ourselves a Chiefs Christmas.
         </div>
+        <div class="legal">
+          <a href="https://idsaikc.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          <span>&middot;</span>
+          <a href="https://idsaikc.com/terms-of-service" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+        </div>
       </footer>
-    </div>
+    </main>
+  </div>
 
-    <!-- Snow creation script -->
-    <script>
-      (function () {
-        const layer = document.querySelector(".snow-layer");
-        if (!layer) return;
+  <script>
+    (function createSnow() {
+      const container = document.getElementById("snow-container");
+      const flakeCount = 180;
 
-        const FLAKE_COUNT = 140;
-
-        for (let i = 0; i < FLAKE_COUNT; i++) {
-          const flake = document.createElement("span");
-          flake.classList.add("snowflake");
-
-          const r = Math.random();
-          if (r < 0.5) flake.classList.add("small");
-          else if (r < 0.85) flake.classList.add("medium");
-          else flake.classList.add("large");
-
-          const size = flake.classList.contains("small")
-            ? 2 + Math.random() * 2
-            : flake.classList.contains("medium")
-            ? 3 + Math.random() * 4
-            : 5 + Math.random() * 5;
-
-          flake.style.width = size + "px";
-          flake.style.height = size + "px";
-
-          flake.style.left = Math.random() * 100 + "vw";
-
-          const duration = 10 + Math.random() * 22; // 10–32s
-          const delay = -Math.random() * 30;
-          flake.style.animationDuration = duration + "s";
-          flake.style.animationDelay = delay + "s";
-
-          const drift = (Math.random() * 2 - 1) * 20;
-          flake.style.transform =
-            "translate3d(" + drift + "px, -10vh, 0)";
-
-          layer.appendChild(flake);
-        }
-      })();
-    </script>
-  </body>
+      for (let i = 0; i < flakeCount; i++) {
+        const flake = document.createElement("div");
+        flake.className = "snowflake" + (Math.random() < 0.4 ? " ice" : "");
+        const size = 2 + Math.random() * 3.2;
+        flake.style.width = size + "px";
+        flake.style.height = size + "px";
+        flake.style.left = Math.random() * 100 + "vw";
+        flake.style.animationDuration = 12 + Math.random() * 16 + "s";
+        flake.style.animationDelay = Math.random() * 18 + "s";
+        flake.style.opacity = 0.4 + Math.random() * 0.55;
+        container.appendChild(flake);
+      }
+    })();
+  </script>
+</body>
 </html>
