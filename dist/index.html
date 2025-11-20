@@ -3,156 +3,136 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>We Want a Chiefs Christmas — Vote for Track 1</title>
-<meta name="description" content="Vote which Track 1 version leads the record." />
+<title>We Want a Chiefs Christmas — KC Album & Fundraiser</title>
+<meta name="description" content="We Want a Chiefs Christmas is a Kansas City holiday album raising funds to pay off school lunch debt and fill food and basic-needs gaps for KC families." />
+
 <!-- Open Graph -->
-<meta property="og:title" content="We Want a Chiefs Christmas — Vote for Track 1" />
-<meta property="og:description" content="Pick the Track 1 you want leading the album." />
+<meta property="og:title" content="We Want a Chiefs Christmas — KC Album & Fundraiser" />
+<meta property="og:description" content="Donate to support Rogue Round Table’s work for Kansas City families and get the full We Want a Chiefs Christmas album as a thank-you." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://chiefs.idsaikc.com/og/Contest.png" />
-<meta property="og:url" content="https://chiefs.idsaikc.com/" />
+<meta property="og:image" content="chiefs-album-hero.jpg" />
+<meta property="og:url" content="https://givebutter.com/gochiefs" />
+
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="We Want a Chiefs Christmas — Vote for Track 1" />
-<meta name="twitter:description" content="Pick the Track 1 you want leading the album." />
-<meta name="twitter:image" content="https://chiefs.idsaikc.com/og/Contest.png" />
+<meta name="twitter:title" content="We Want a Chiefs Christmas — KC Album & Fundraiser" />
+<meta name="twitter:description" content="A Kansas City holiday album raising funds to pay off school lunch debt and support local families." />
+<meta name="twitter:image" content="chiefs-album-hero.jpg" />
+
 <style>
   :root{
     --bg:#0a0b13;
     --panel:#101223;
     --ink:#e6e8f2;
     --muted:#a7adcf;
-    --accent:#E31837; /* Chiefs red */
-    --gold:#FFD166;   /* Plaza gold */
-    --aurora1:#5b5bd6; /* cosmic cools */
-    --aurora2:#18b6b6;
-    --aurora3:#6e2ddc;
+    --accent:#E31837;
+    --gold:#FFD166;
     --ring:#3c3f60;
-    --ok:#37d67a;
   }
   *{box-sizing:border-box}
   html,body{height:100%}
-  @keyframes fall {
-    0% { 
-      transform: translateY(-30px) rotate(0deg); 
-      opacity: 0.8; 
-    }
-    5% {
-      opacity: 1;
-    }
-    100% { 
-      transform: translateY(calc(100vh + 300px)) rotate(360deg); 
-      opacity: 0.8; 
-    }
-  }
-  @keyframes glisten {
-    0%, 100% { 
-      opacity: 0.7;
-      filter: brightness(1) drop-shadow(0 0 3px rgba(255,255,255,0.4));
-    }
-    25% {
-      opacity: 1;
-      filter: brightness(2) drop-shadow(0 0 8px rgba(255,255,255,0.8));
-    }
-    50% { 
-      opacity: 1;
-      filter: brightness(2.2) drop-shadow(0 0 15px rgba(255,255,255,1));
-    }
-    75% {
-      opacity: 1;
-      filter: brightness(2) drop-shadow(0 0 8px rgba(255,255,255,0.8));
-    }
-  }
   body{
-    margin:0; color:var(--ink); 
+    margin:0; color:var(--ink);
     background:#081325;
-    font:16px/1.5 Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+    font:16px/1.5 Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
     overflow-x:hidden;
     position:relative;
+  }
+
+  /* Snow */
+  @keyframes fall {
+    0% { transform: translateY(-30px) rotate(0deg); opacity: 0.8; }
+    5% { opacity: 1; }
+    100% { transform: translateY(calc(100vh + 300px)) rotate(360deg); opacity: 0.8; }
+  }
+  @keyframes glisten {
+    0%, 100% { opacity: 0.7; filter: brightness(1) drop-shadow(0 0 3px rgba(255,255,255,0.4)); }
+    25% { opacity: 1; filter: brightness(2) drop-shadow(0 0 8px rgba(255,255,255,0.8)); }
+    50% { opacity: 1; filter: brightness(2.2) drop-shadow(0 0 15px rgba(255,255,255,1)); }
+    75% { opacity: 1; filter: brightness(2) drop-shadow(0 0 8px rgba(255,255,255,0.8)); }
   }
   .snowflakes{
     position:fixed; top:0; left:0; width:100%; height:100vh; pointer-events:none; z-index:0;
     overflow:hidden;
   }
   .snowflake{
-    position:absolute; color:#fff; font-family:Arial, sans-serif; 
+    position:absolute; top:0;
+    color:#fff; font-family:Arial, sans-serif;
     text-shadow:0 0 5px rgba(255,255,255,0.8);
-    top:0;
     pointer-events:none;
   }
-  .snowflake svg{
-    display:block;
-    filter: drop-shadow(0 0 3px rgba(255,255,255,0.6));
-  }
-  .wrap{max-width:1100px; margin:0 auto; padding:32px 20px 80px}
+  .snowflake svg{display:block; filter: drop-shadow(0 0 3px rgba(255,255,255,0.6));}
+
+  .wrap{max-width:1100px; margin:0 auto; padding:32px 20px 80px; position:relative; z-index:1;}
+
   .hero{
-    display:grid; gap:18px; grid-template-columns: 1.2fr .8fr; align-items:center; padding:48px 40px; border:1px solid #1b1f35; border-radius:18px; background:rgba(8,19,37,0.85);
+    display:grid; gap:18px; grid-template-columns: 1.2fr .8fr; align-items:center;
+    padding:48px 40px;
+    border:1px solid #1b1f35; border-radius:18px;
+    background:rgba(8,19,37,0.9);
     box-shadow: 0 10px 40px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.03);
-    position:relative; z-index:1;
     backdrop-filter: blur(10px);
   }
-  .hero img{
-    background:transparent;
-  }
-  .hero h1{margin:0; font-weight:800; letter-spacing:.3px; line-height:1.04; font-size: clamp(28px, 4.2vw, 52px)}
+  @media(max-width:879px){ .hero{grid-template-columns:1fr; padding:30px 20px;} }
+
+  .hero h1{margin:0; font-weight:800; letter-spacing:.3px; line-height:1.04; font-size: clamp(28px, 4.2vw, 52px);}
   .tag{display:inline-block; padding:6px 10px; border-radius:999px; background:linear-gradient(90deg, var(--accent), var(--gold)); color:#140a0a; font-weight:700; font-size:12px; letter-spacing:.4px; margin-bottom:16px}
   .sub{color:var(--muted)}
+  .flex{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+  .legend{font-size:13px; color:#c9cdeb; margin-top:6px}
+
+  .btn{
+    appearance:none; border:none; cursor:pointer;
+    font-weight:700; letter-spacing:.2px; border-radius:12px; padding:10px 16px;
+    color:#0d0f19; background:linear-gradient(90deg, var(--gold), #ffc54d);
+    box-shadow: 0 6px 16px rgba(255,197,77,.2);
+    text-decoration:none; display:inline-block; font-size:14px;
+  }
+  .btn:disabled{opacity:.55; cursor:not-allowed}
+
   .panel{
-    margin-top:26px; border:1px solid #1b1f35; border-radius:16px; background:rgba(8,19,37,0.85);
+    margin-top:26px;
+    border:1px solid #1b1f35; border-radius:16px;
+    background:rgba(8,19,37,0.9);
     box-shadow: 0 10px 30px rgba(0,0,0,.28), inset 0 0 0 1px rgba(255,255,255,.03);
-    position:relative; z-index:1;
     backdrop-filter: blur(10px);
   }
   .panel h2{margin:0 0 6px; padding:22px 22px 0; font-size:22px}
   .panel .body{padding:0 22px 22px; color:var(--muted)}
-  .grid{display:grid; gap:14px}
-  @media(min-width:880px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
-  @media(max-width:879px){ .hero{grid-template-columns:1fr} .grid.cols-2{grid-template-columns:1fr} }
-  .vote-card{
-    border:1px solid #1b1f35; border-radius:14px; padding:16px; background:rgba(8,19,37,0.85);
-    position:relative; overflow:hidden; z-index:1;
-    backdrop-filter: blur(10px);
-  }
-  .vote-card img{
-    background:transparent;
-  }
-  .vote-card h3{margin:0 0 6px; font-size:16px; letter-spacing:.2px}
-  .badge{display:inline-block; font-size:11px; padding:4px 8px; border-radius:999px; border:1px solid #2a2e4f; color:#cbd1ee; background:rgba(42,46,79,.35); margin-left:8px}
-  .control{display:flex; gap:12px; align-items:center; margin-top:10px}
-  .btn{
-    appearance:none; border:none; cursor:pointer; font-weight:700; letter-spacing:.2px; border-radius:12px; padding:10px 14px;
-    color:#0d0f19; background:linear-gradient(90deg, var(--gold), #ffc54d);
-    box-shadow: 0 6px 16px rgba(255,197,77,.2);
-    text-decoration:none; display:inline-block;
-  }
-  .btn.secondary{background:linear-gradient(90deg, #9aa1c6, #c5cae9); color:#101223}
-  .btn.ghost{background:transparent; color:var(--ink); border:1px solid #2a2e4f}
-  .btn:disabled{opacity:.55; cursor:not-allowed}
-  .legend{font-size:13px; color:#c9cdeb; margin-top:6px}
-  .flex{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
-  .field{display:grid; gap:6px; margin:8px 0}
-  label{font-size:13px; color:#cbd1ee}
-  input, textarea, select{
-    width:100%; padding:10px 12px; border-radius:10px; border:1px solid #232744; background:#0e1020; color:var(--ink); font:inherit;
-  }
-  textarea{min-height:90px}
-  .tracklist li{padding:8px 0; border-bottom:1px dashed #232744}
   .kicker{font-size:12px; letter-spacing:.3px; color:#9fb7ff; text-transform:uppercase}
-  .hl{color:var(--gold)}
-  .ok{color:var(--ok); font-weight:700}
-  .foot{margin-top:28px; font-size:13px; color:#8f95bb}
-  .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+
   .banner-cta{
-    margin-top:32px; margin-bottom:24px; padding:18px 22px; border-radius:14px; background:rgba(8,19,37,0.85);
+    margin-top:32px; margin-bottom:24px;
+    padding:18px 22px; border-radius:14px;
+    background:rgba(8,19,37,0.9);
     border:1px solid rgba(227,24,55,.3); text-align:center;
-    position:relative; z-index:1;
     backdrop-filter: blur(10px);
   }
   .banner-cta p{margin:0 0 12px; font-size:16px; font-weight:600; color:var(--ink)}
+  .hl{color:var(--gold)}
+
+  .tracklist{list-style:none; margin:0; padding:0}
+  .tracklist li{padding:8px 0; border-bottom:1px dashed #232744; font-size:14px; display:flex; justify-content:space-between; gap:12px}
+  .track-num{opacity:.65; font-size:12px}
+  .foot{margin-top:18px; font-size:13px; color:#8f95bb}
+
+  .grid{display:grid; gap:14px}
+  @media(min-width:880px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+  @media(max-width:879px){ .grid.cols-3{grid-template-columns:1fr} }
+
+  .art-card{
+    border:1px solid #1b1f35; border-radius:14px; padding:0; background:rgba(8,19,37,0.92);
+    overflow:hidden; backdrop-filter: blur(8px);
+  }
+  .art-card img{width:100%; display:block; background:transparent;}
+  .art-card h3{margin:0 0 6px; font-size:16px; letter-spacing:.2px}
+  .art-card p{margin:0; font-size:13px; color:var(--muted);}
+
   .share-buttons{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; justify-content:center}
   .share-btn{display:inline-flex; align-items:center; gap:6px; padding:8px 14px; border-radius:8px; background:rgba(42,46,79,.6); border:1px solid #2a2e4f; color:#cbd1ee; text-decoration:none; font-size:13px; transition:all .2s}
   .share-btn:hover{background:rgba(42,46,79,.8); border-color:#3c3f60}
-  .footer-social-section{margin-top:26px; text-align:center; padding:24px 22px; border:1px solid #1b1f35; border-radius:16px; background:rgba(8,19,37,0.85); box-shadow: 0 10px 30px rgba(0,0,0,.28), inset 0 0 0 1px rgba(255,255,255,.03); position:relative; z-index:1; backdrop-filter: blur(10px);}
+
+  .footer-social-section{margin-top:26px; text-align:center; padding:24px 22px; border:1px solid #1b1f35; border-radius:16px; background:rgba(8,19,37,0.92); box-shadow: 0 10px 30px rgba(0,0,0,.28), inset 0 0 0 1px rgba(255,255,255,.03); backdrop-filter: blur(10px);}
   .footer-content{display:flex; flex-wrap:wrap; gap:16px 20px; align-items:center; justify-content:center; padding:20px 22px; margin-top:0; font-size:13px; color:var(--muted)}
   .footer-link{color:var(--muted); text-decoration:none; transition:color .2s}
   .footer-link:hover{color:var(--ink)}
@@ -160,278 +140,382 @@
 </style>
 </head>
 <body>
-  <div class="snowflakes" id="snowflakes"></div>
-  <div class="wrap">
-    <section class="hero">
-      <div>
-        <span class="tag">KC Album • Community-Powered • Zero-Waste</span>
-        <h1>We Want a Chiefs Christmas</h1>
-        <div class="flex" style="margin-top:10px">
-          <a href="https://suno.com/playlist/444c6bc1-4263-4632-b05b-36812b6bf5cd" target="_blank" rel="noopener noreferrer" class="btn">Vote for Track 1</a>
-        </div>
-        <p class="legend">Vote by liking your favorite song on the Suno playlist. The song with the most likes wins!</p>
-      </div>
-      <div>
-        <img src="We Want A Chiefs Christmas Images/Contest.png" alt="We Want A Chiefs Christmas Contest" style="width:100%; height:auto; border-radius:18px; border:1px solid #1b1f35; box-shadow: 0 20px 60px rgba(0,0,0,.35);" />
-      </div>
-    </section>
+<div class="snowflakes" id="snowflakes"></div>
 
-    <!-- Top Banner CTA -->
-    <div class="banner-cta">
-      <p>Kansas City, your likes decide Track #1! Listen to all 6 versions and like your favorite on Suno. The song with the most likes wins — help shape the first community-built Christmas album!</p>
-      <div class="flex" style="justify-content:center">
-        <button id="scrollToVote" class="btn">Listen & Vote</button>
-        <a href="https://suno.com/playlist/444c6bc1-4263-4632-b05b-36812b6bf5cd" target="_blank" rel="noopener noreferrer" class="btn ghost">Open Playlist</a>
+<!-- BACKGROUND MUSIC -->
+<audio id="bg-music" src="chiefs-christmas-preview.mp3" preload="auto"></audio>
+
+<div class="wrap">
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <span class="tag">Kansas City • School Lunch Debt Fundraiser</span>
+      <h1>We Want a Chiefs Christmas</h1>
+      <p class="sub" style="margin-top:10px">
+        A Kansas City holiday album created to do one thing:
+        help Rogue Round Table pay off school lunch debt and support local families across KC.
+      </p>
+      <div class="flex" style="margin-top:16px">
+        <a href="https://givebutter.com/gochiefs"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn">Donate &amp; Get the Album</a>
       </div>
+      <p class="legend">
+        Every donation unlocks the full album and helps a KC kid eat with dignity this winter.
+      </p>
     </div>
+    <div>
+      <img src="chiefs-album-hero.jpg"
+           alt="Hand-painted Kansas City Chiefs fans holding festive Christmas signs in the snow"
+           style="width:100%; height:auto; border-radius:18px; border:1px solid #1b1f35; box-shadow:0 20px 60px rgba(0,0,0,.35);" />
+    </div>
+  </section>
 
-    <!-- About the Project -->
-    <section class="panel">
-      <h2>About the Project</h2>
-      <div class="body">
-        <p>"We Want a Chiefs Christmas" is part of the <strong>Rogue Round Table</strong> project — a Kansas City nonprofit using creativity and technology to give back. Produced through <strong>IDSAI</strong>, this community-powered album is 100% donation-supported, and every dollar raised goes back into helping Kansas City families this winter.</p>
-        <p style="margin-top:12px; font-size:13px; color:var(--muted)">Produced by IDSAI for Rogue Round Table</p>
-      </div>
-    </section>
-
-    <!-- Image Gallery -->
-    <section class="panel">
-      <h2>Contest Graphics & Artwork</h2>
-      <div class="body">
-        <div class="grid cols-3" style="margin-top:16px">
-          <div class="vote-card" style="padding:0; overflow:hidden">
-            <img src="We Want A Chiefs Christmas Images/We-Want-A-Chiefs-Christmas-1.png" alt="We Want A Chiefs Christmas 1" style="width:100%; height:auto; display:block" />
-            <div style="padding:16px">
-              <h3 style="margin:0 0 10px; font-size:16px">Arrowhead Original</h3>
-              <a href="https://suno.com/s/rKWhu5d3bxQ6jBuh" target="_blank" rel="noopener noreferrer" class="btn secondary" style="width:100%">Version 1</a>
-            </div>
-          </div>
-          <div class="vote-card" style="padding:0; overflow:hidden">
-            <img src="We Want A Chiefs Christmas Images/We-Want-A-Chiefs-Christmas-2.png" alt="We Want A Chiefs Christmas 2" style="width:100%; height:auto; display:block" />
-            <div style="padding:16px">
-              <h3 style="margin:0 0 10px; font-size:16px">Arrowhead Original</h3>
-              <a href="https://suno.com/s/MI6ThADmyZzsjiCl" target="_blank" rel="noopener noreferrer" class="btn secondary" style="width:100%">Version 2</a>
-            </div>
-          </div>
-          <div class="vote-card" style="padding:0; overflow:hidden">
-            <img src="We Want A Chiefs Christmas Images/We-Want-A-Chiefs-Christmas-3.jpeg" alt="We Want A Chiefs Christmas 3" style="width:100%; height:auto; display:block" />
-            <div style="padding:16px">
-              <h3 style="margin:0 0 10px; font-size:16px">Arrowhead Original</h3>
-              <a href="https://suno.com/s/yErAzAUaihUkbRSt" target="_blank" rel="noopener noreferrer" class="btn secondary" style="width:100%">Version 3</a>
-            </div>
-          </div>
-          <div class="vote-card" style="padding:0; overflow:hidden">
-            <img src="We Want A Chiefs Christmas Images/We-Want-A-Chiefs-Christmas-4.png" alt="We Want A Chiefs Christmas 4" style="width:100%; height:auto; display:block" />
-            <div style="padding:16px">
-              <h3 style="margin:0 0 10px; font-size:16px">Arrowhead Original</h3>
-              <a href="https://suno.com/s/OSVGqPkGu4yfHZKT" target="_blank" rel="noopener noreferrer" class="btn secondary" style="width:100%">Version 4</a>
-            </div>
-          </div>
-          <div class="vote-card" style="padding:0; overflow:hidden">
-            <img src="We Want A Chiefs Christmas Images/We-Want-A-Chiefs-Christmas-5.png" alt="We Want A Chiefs Christmas 5" style="width:100%; height:auto; display:block" />
-            <div style="padding:16px">
-              <h3 style="margin:0 0 10px; font-size:16px">Arrowhead Original</h3>
-              <a href="https://suno.com/s/K6wDtJMGvvDkowLr" target="_blank" rel="noopener noreferrer" class="btn secondary" style="width:100%">Version 5</a>
-            </div>
-          </div>
-          <div class="vote-card" style="padding:0; overflow:hidden">
-            <img src="We Want A Chiefs Christmas Images/We-Want-A-Chiefs-Christmas-6.png" alt="We Want A Chiefs Christmas 6" style="width:100%; height:auto; display:block" />
-            <div style="padding:16px">
-              <h3 style="margin:0 0 10px; font-size:16px">Arrowhead Original</h3>
-              <a href="https://suno.com/s/gVIO5DFG3Xp4NUN6" target="_blank" rel="noopener noreferrer" class="btn secondary" style="width:100%">Version 6</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Voting -->
-    <section id="vote" class="panel" style="scroll-margin-top:20px">
-      <h2>Vote: Which Track 1 version should lead the album?</h2>
-      <div class="body">
-        <p class="kicker">How to vote:</p>
-        <p style="margin-bottom:16px">Listen to all six versions on the playlist below. <strong>The song with the most likes wins.</strong> Simply listen and like your favorite track on Suno!</p>
-        <div class="flex" style="margin-bottom:20px">
-          <a href="https://suno.com/playlist/444c6bc1-4263-4632-b05b-36812b6bf5cd" target="_blank" rel="noopener noreferrer" class="btn">🎵 Listen & Vote on Playlist</a>
-        </div>
-
-        <h3 style="margin-top:32px; margin-bottom:12px; font-size:18px">Voting Deadline</h3>
-        <p style="margin-bottom:24px"><strong>Voting ends Friday, November 14th.</strong> On Monday, November 17th, we will announce the opening track and tell you how to get the full album.</p>
-
-        <h3 style="margin-top:32px; margin-bottom:12px; font-size:18px">How to Help KC Right Now — It's Free!</h3>
-        <p><strong>Spread the word!</strong> Share your favorite and rally votes for your song. Spread the word, get KC involved — let's do something that feels good right now.</p>
-      </div>
-    </section>
-
-    <!-- Social Links -->
-    <section class="footer-social-section">
-      <div class="share-buttons" style="margin-top:0">
-        <a href="https://www.facebook.com/profile.php?id=61567658708173" target="_blank" rel="noopener noreferrer" class="share-btn">Facebook</a>
-        <a href="https://x.com/IDStrategicAI" target="_blank" rel="noopener noreferrer" class="share-btn">X (Twitter)</a>
-        <a href="https://www.linkedin.com/company/rogue-round-table/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="share-btn">LinkedIn</a>
-        <a href="https://www.tiktok.com/search?q=rogueroundtable&t=1762222208873" target="_blank" rel="noopener noreferrer" class="share-btn">TikTok</a>
-        <a href="https://www.instagram.com/therogueroundtable/" target="_blank" rel="noopener noreferrer" class="share-btn">Instagram</a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <section class="panel">
-      <div class="footer-content">
-        <a href="mailto:vjm@innovation-dreams.com" class="footer-link">Contact: vjm@innovation-dreams.com</a>
-        <span class="footer-divider">•</span>
-        <a href="https://idsaikc.com/ai-pledge-policy" target="_blank" rel="noopener noreferrer" class="footer-link">AI Pledge Policy</a>
-        <span class="footer-divider">•</span>
-        <a href="#" target="_blank" rel="noopener noreferrer" class="footer-link">Terms of Service</a>
-        <span class="footer-divider">•</span>
-        <a href="#" target="_blank" rel="noopener noreferrer" class="footer-link">Privacy Policy</a>
-      </div>
-    </section>
-
+  <!-- BANNER CTA -->
+  <div class="banner-cta">
+    <p>Turn up the music. Pay down school lunch debt.</p>
+    <p style="font-size:14px; color:var(--muted); margin-bottom:14px;">
+      This album is our love letter to Kansas City. Your donation fuels real support for KC families
+      and gets you the full <span class="hl">We Want a Chiefs Christmas</span> album as a thank-you.
+    </p>
+    <div class="flex" style="justify-content:center">
+      <a href="https://givebutter.com/gochiefs"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn">Donate &amp; Get the Album</a>
+    </div>
   </div>
 
+  <!-- ABOUT / WHY -->
+  <section class="panel">
+    <h2>What This Fundraiser Is</h2>
+    <div class="body">
+      <p>
+        <strong>We Want a Chiefs Christmas</strong> is a brand-new holiday album created by <strong>IDSAI</strong> in partnership
+        with <strong>Rogue Round Table (RRT)</strong>, a Kansas City–based nonprofit.
+      </p>
+      <p>
+        It’s our way of saying thank you to a city that always shows up to help others—and of raising the flexible,
+        local funding needed to keep KC kids fed when systems fall short.
+      </p>
+      <p style="margin-top:12px">
+        When families across KC faced challenges from government shutdowns, rising costs, and benefit cuts, we saw
+        school lunch debt growing quietly in the background and food pantries struggling to keep up. This album is a
+        joyful, creative way to respond:
+      </p>
+      <ul style="margin:10px 0 0 18px; padding:0; color:var(--muted); font-size:14px">
+        <li>Bring some light back into a stressed-out season.</li>
+        <li>Raise cash that can move quickly where it’s most needed.</li>
+        <li>Help kids and families without adding shame or red tape.</li>
+      </ul>
+      <p style="margin-top:14px; font-size:13px; color:var(--muted)">
+        Release date: November 20, 2025 · Fundraiser runs through New Year’s Eve · Available exclusively through this campaign.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHY KC NEEDS THIS -->
+  <section class="panel">
+    <h2>Why Kansas City Needs This Right Now</h2>
+    <div class="body">
+      <p>
+        Kansas City is showing up everywhere—food drives, hygiene drives, school support, pantry volunteers—but
+        the need has outpaced the resources. Families are slipping through the cracks in ways most people never see.
+      </p>
+      <p style="margin-top:10px">
+        Local nonprofits and outreach groups have shared the same urgent concerns:
+      </p>
+      <ul style="margin:10px 0 0 18px; padding:0; color:var(--muted); font-size:14px">
+        <li>Fresh food is coming in spoiled or unusable.</li>
+        <li>Canned donations are often expired.</li>
+        <li>Homeless outreach teams can’t access soft foods like bananas, yogurt, or oatmeal.</li>
+        <li>Pantries have little to no meat, butter, dairy, or formula.</li>
+        <li>Schools can’t send home the snacks and kid-friendly items they’ve supplied for years.</li>
+        <li>Longtime distributors are stretched past capacity.</li>
+      </ul>
+      <p style="margin-top:12px">
+        This fundraiser’s purpose is simple:
+        <strong>Connect the gaps. Fund the work. Feed the families. Keep it local.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- WHERE MONEY GOES -->
+  <section class="panel">
+    <h2>Where Your Donation Goes</h2>
+    <div class="body">
+      <p class="kicker">All funds stay in the Kansas City metro area</p>
+      <p>
+        We focus on cash support because partners like <strong>Harvesters</strong> and other local networks can stretch
+        every dollar further through discounted wholesale pricing. That means your donation reaches more people,
+        more efficiently, than if we bought retail goods ourselves.
+      </p>
+      <p style="margin-top:10px">Every donation is used for things like:</p>
+      <ul style="margin:10px 0 0 18px; padding:0; color:var(--muted); font-size:14px">
+        <li>Fresh foods (produce, dairy, eggs, and meat when possible)</li>
+        <li>Soft foods for neighbors without teeth or with medical needs</li>
+        <li>Kid snacks &amp; school support items</li>
+        <li>Formula and baby staples</li>
+        <li>Pantry restock for high-need partners</li>
+        <li>Micro-grants for KC nonprofits filling specific gaps</li>
+        <li>Emergency family assistance for groceries and basics</li>
+      </ul>
+      <p style="margin-top:12px">
+        We’re not replacing anyone’s work. <strong>We’re reinforcing it.</strong> This campaign helps fill the gaps
+        that other programs can’t reach fast enough.
+      </p>
+    </div>
+  </section>
+
+  <!-- TRACKLIST -->
+  <section class="panel">
+    <h2>Full Track List</h2>
+    <div class="body">
+      <p class="kicker">Every version, every vibe — all included with your donation</p>
+
+      <ul class="tracklist" style="margin-top:14px">
+
+        <!-- CORE ALBUM -->
+        <li><span><strong>Track 1:</strong> We Want a Chiefs Christmas (Arrowhead Original)</span><span class="track-num">2:36</span></li>
+        <li><span><strong>Track 2:</strong> We Want a Chiefs Christmas (Tailgate Edition)</span><span class="track-num">3:34</span></li>
+        <li><span><strong>Track 3:</strong> Front Porch Country Christmas (KC Home Edition)</span><span class="track-num">2:59</span></li>
+        <li><span><strong>Track 4:</strong> We Want a Chiefs Christmas (Game Night Remix — Hype Mode)</span><span class="track-num">2:42</span></li>
+        <li><span><strong>Track 5:</strong> We Want a Chiefs Christmas (Gospel-Soul)</span><span class="track-num">3:04</span></li>
+        <li><span><strong>Track 6:</strong> We Want a Chiefs Christmas (Orchestral Cinematic)</span><span class="track-num">5:17</span></li>
+        <li><span><strong>Track 7:</strong> We Want a Chiefs Christmas (R&amp;B Diva Ballad)</span><span class="track-num">3:52</span></li>
+
+        <!-- KIDS CLUB MIXES -->
+        <li><span><strong>Track 8:</strong> We Want a Chiefs Christmas (Kids Club Mix — Stadium Edition)</span><span class="track-num">1:36</span></li>
+        <li><span><strong>Track 9:</strong> We Want a Chiefs Christmas (Kids Club Mix — Playtime Edition)</span><span class="track-num">1:24</span></li>
+        <li><span><strong>Track 10:</strong> Swingin’ with Santa &amp; the KC Wolf (Kids Jazz Club Edition)</span><span class="track-num">2:21</span></li>
+
+        <!-- REMIXES & TRAP -->
+        <li><span><strong>Track 11:</strong> We Want a Chiefs Christmas (Game Night Remix — Party Mode)</span><span class="track-num">3:07</span></li>
+        <li><span><strong>Track 12:</strong> We Want a Chiefs Christmas (Hard Trap Melody)</span><span class="track-num">2:48</span></li>
+        <li><span><strong>Track 13:</strong> KC Christmas (All-In Finale Medley)</span><span class="track-num">3:12</span></li>
+
+        <!-- BONUS TRACKS -->
+        <li><span><strong>Bonus J1:</strong> We Want a Chiefs Christmas (KC Jazz Orchestra)</span><span class="track-num">2:29</span></li>
+        <li><span><strong>Bonus J2:</strong> We Want a Chiefs Christmas (12-Bar Blues Jam)</span><span class="track-num">3:01</span></li>
+        <li><span><strong>Bonus J3:</strong> We Want a Chiefs Christmas (Plaza Lounge Trio)</span><span class="track-num">2:34</span></li>
+        <li><span><strong>Bonus J4:</strong> We Want a Chiefs Christmas (Bebop Breakout)</span><span class="track-num">2:41</span></li>
+
+        <!-- VAULT TRACKS -->
+        <li><span><strong>Vault:</strong> It’s a KC Christmas, Royals in the Kingdom A</span><span class="track-num">3:19</span></li>
+        <li><span><strong>Vault:</strong> It’s a KC Christmas, Royals in the Kingdom C</span><span class="track-num">3:24</span></li>
+        <li><span><strong>Vault:</strong> KC Christmas: Light It Up!</span><span class="track-num">2:45</span></li>
+
+      </ul>
+
+      <p class="foot">
+        All 21 tracks are included with every donation through
+        <a href="https://givebutter.com/gochiefs"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:var(--gold); text-decoration:none;">givebutter.com/gochiefs</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ARTWORK GRID -->
+  <section class="panel">
+    <h2>KC Holiday Artwork &amp; Visuals</h2>
+    <div class="body">
+      <p>
+        The visuals for this project were built to feel like a Chiefs Christmas: fans in the stands, Plaza lights,
+        KC Wolf and Santa in full game-day mode, and a city that shows up for its own.
+      </p>
+
+      <div class="grid cols-3" style="margin-top:16px">
+
+        <!-- Title Album Cover -->
+        <div class="art-card">
+          <img src="chiefs-album-cover-title.jpg"
+               alt="We Want A Chiefs Christmas album cover with painted Chiefs fans and holiday signs" />
+          <div style="padding:16px">
+            <h3>Official Album Cover</h3>
+            <p>All the Arrowhead signs and holiday chaos in one frame — this is the face of the fundraiser.</p>
+          </div>
+        </div>
+
+        <!-- KC Santa Fan -->
+        <div class="art-card">
+          <img src="chiefs-santa-fan.jpg"
+               alt="Kansas City Santa fan in Chiefs hat and sunglasses pointing up in the snow" />
+          <div style="padding:16px">
+            <h3>Santa, But Make It KC</h3>
+            <p>Chiefs Santa is ready for kickoff and Christmas dinner — use this anywhere you share the campaign.</p>
+          </div>
+        </div>
+
+        <!-- KC Wolf on ATV -->
+        <div class="art-card">
+          <img src="chiefs-wolf-sleigh.jpg"
+               alt="KC Wolf in a Santa suit riding an ATV with a Super Bowl champions flag" />
+          <div style="padding:16px">
+            <h3>KC Wolf’s Holiday Run</h3>
+            <p>KC Wolf delivering good news: every album download helps feed families across Kansas City.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO HELP / PARTNER -->
+  <section class="panel">
+    <h2>How to Help &amp; How to Partner</h2>
+    <div class="body">
+      <p class="kicker">Simple, transparent, KC-centered</p>
+      <ol style="margin:10px 0 0 18px; padding:0; font-size:14px; color:var(--muted)">
+        <li style="margin-bottom:8px;">
+          <strong>Donate.</strong> Click any “Donate &amp; Get the Album” button to give through Givebutter.
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Get the album.</strong> Every donor receives access instructions for the full <em>We Want a Chiefs Christmas</em> project.
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Turn it up &amp; pass it on.</strong> Play it at home, at work, and at watch parties—and invite others to donate so every listen helps another KC family.
+        </li>
+      </ol>
+
+      <p style="margin-top:16px">
+        If you’re a business, nonprofit, community org, school, church, or workplace, we’d love to partner with you.
+      </p>
+      <p style="margin-top:8px"><strong>Choose your lane:</strong></p>
+      <ul style="margin:8px 0 0 18px; padding:0; font-size:14px; color:var(--muted)">
+        <li><strong>Funding Partner</strong> — direct financial support or match campaigns.</li>
+        <li><strong>Resource Partner</strong> — goods, services, or pickup/delivery capabilities.</li>
+        <li><strong>Amplifier</strong> — share the campaign with your customers, congregation, or staff.</li>
+        <li><strong>Host Site</strong> — play the album and invite donations at your workplace or event.</li>
+        <li><strong>Cross-Collaboration Partner</strong> — help coordinate pipelines between multiple orgs.</li>
+      </ul>
+      <p style="margin-top:12px; font-size:13px;">
+        Partnership inquiries: <a href="mailto:vjm@innovation-dreams.com" style="color:var(--gold); text-decoration:none;">vjm@innovation-dreams.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- OTHER CITIES -->
+  <section class="panel">
+    <h2>For Other Cities</h2>
+    <div class="body">
+      <p>
+        If your city has a strong base of Chiefs supporters—or you just love the model—and you’d like to use this
+        album (or a similar idea) to support families where you live, reach out.
+      </p>
+      <p style="margin-top:10px">
+        We can either:
+      </p>
+      <ul style="margin:8px 0 0 18px; padding:0; font-size:14px; color:var(--muted)">
+        <li>Donate the entire album to your community as a fundraiser, or</li>
+        <li>Guide you on how to create a similar project tailored to your area.</li>
+      </ul>
+      <p style="margin-top:12px">
+        Our ultimate goal is simple: <strong>stronger, better-connected communities that take care of each other.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- SOCIAL -->
+  <section class="footer-social-section">
+    <p style="margin:0 0 10px; font-weight:600;">Stay connected with Rogue Round Table &amp; the album journey</p>
+    <div class="share-buttons" style="margin-top:0">
+      <a href="https://www.facebook.com/profile.php?id=61567658708173" target="_blank" rel="noopener noreferrer" class="share-btn">Facebook</a>
+      <a href="https://x.com/IDStrategicAI" target="_blank" rel="noopener noreferrer" class="share-btn">X (Twitter)</a>
+      <a href="https://www.linkedin.com/company/rogue-round-table/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="share-btn">LinkedIn</a>
+      <a href="https://www.tiktok.com/search?q=rogueroundtable&t=1762222208873" target="_blank" rel="noopener noreferrer" class="share-btn">TikTok</a>
+      <a href="https://www.instagram.com/therogueroundtable/" target="_blank" rel="noopener noreferrer" class="share-btn">Instagram</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="panel">
+    <div class="footer-content">
+      <a href="mailto:vjm@innovation-dreams.com" class="footer-link">Contact: vjm@innovation-dreams.com</a>
+      <span class="footer-divider">•</span>
+      <a href="https://idsaikc.com/ai-pledge-policy" target="_blank" rel="noopener noreferrer" class="footer-link">AI Pledge Policy</a>
+      <span class="footer-divider">•</span>
+      <span class="footer-link">Rogue Round Table · Kansas City, MO</span>
+    </div>
+  </section>
+</div>
+
 <script>
-  const projectInbox = "vmurphy@rogue3d.com"; // vote destination
-  const subjectBase = "Vote: Track 1 Lead — We Want a Chiefs Christmas";
+  const snowflakeShapes = ['❄','❅','❆','❄','❅','❆'];
 
-  function encode(s){return encodeURIComponent(s).replace(/%20/g,'+');}
-
-  function vote(choice){
-    const name = (document.getElementById('voterName').value || '').trim();
-    const email = (document.getElementById('voterEmail').value || '').trim();
-    const note  = (document.getElementById('note').value || '').trim();
-
-    const subject = `${subjectBase} — ${choice}`;
-    let body = `My vote: ${choice}\n`;
-    if(name) body += `Name: ${name}\n`;
-    if(email) body += `Email: ${email}\n`;
-    if(note) body += `Note: ${note}\n`;
-    body += `\nSent from the album vote page.`;
-
-    const href = `mailto:${encode(projectInbox)}?subject=${encode(subject)}&body=${encode(body)}`;
-    window.location.href = href;
-  }
-
-  document.getElementById('scrollToVote').addEventListener('click', ()=>{
-    document.getElementById('vote').scrollIntoView({behavior:'smooth', block:'start'});
-  });
-
-  // Beautiful snowflake Unicode characters - only actual snowflakes
-  const snowflakeShapes = [
-    '❄', '❅', '❆', '❄', '❅', '❆', '❄', '❅', '❆', '❄', '❅', '❆'
-  ];
-
-  // Create beautiful, ornate SVG snowflake shapes with detailed patterns
-  function createSnowflakeSVG(size, rotation) {
-    const paths = [
-      // Classic 6-point snowflake
-      'M12,1 L13,6 L18,6 L14,10 L16,15 L12,13 L8,15 L10,10 L6,6 L11,6 Z M12,1 L12,23 M12,1 L8,8 L2,8 M12,1 L16,8 L22,8 M12,23 L8,16 L2,16 M12,23 L16,16 L22,16',
-      // Ornate star snowflake
-      'M12,1 L13,7 L19,7 L14,11 L16,17 L12,14 L8,17 L10,11 L5,7 L11,7 Z M12,1 L12,23 M12,1 L7,6 L2,6 L6,10 L1,13 L6,16 L2,20 L7,20 M12,1 L17,6 L22,6 L18,10 L23,13 L18,16 L22,20 L17,20 M12,23 L7,18 L2,18 L6,14 L1,11 L6,8 L2,4 L7,4 M12,23 L17,18 L22,18 L18,14 L23,11 L18,8 L22,4 L17,4',
-      // Detailed 6-arm snowflake
-      'M12,1 L13,8 L20,8 L15,13 L17,20 L12,16 L7,20 L9,13 L4,8 L11,8 Z M12,1 L12,23 M12,1 L6,7 L1,7 L5,11 L0,14 L5,17 L1,21 L6,21 M12,1 L18,7 L23,7 L19,11 L24,14 L19,17 L23,21 L18,21 M12,23 L6,17 L1,17 L5,13 L0,10 L5,7 L1,3 L6,3 M12,23 L18,17 L23,17 L19,13 L24,10 L19,7 L23,3 L18,3',
-      // Delicate branching snowflake
-      'M12,1 L12,23 M12,1 L8,7 L2,7 L6,10 L2,13 L6,16 L2,19 L8,19 M12,1 L16,7 L22,7 L18,10 L22,13 L18,16 L22,19 L16,19 M12,23 L8,17 L2,17 L6,14 L2,11 L6,8 L2,5 L8,5 M12,23 L16,17 L22,17 L18,14 L22,11 L18,8 L22,5 L16,5',
-      // Complex 12-point snowflake
-      'M12,1 L13,8 L20,8 L15,13 L20,13 L17,20 L12,16 L7,20 L4,13 L9,13 L4,8 L11,8 Z M12,1 L12,23 M12,1 L5,5 L1,1 L5,9 L0,9 L5,13 L1,17 L5,13 M12,1 L19,5 L23,1 L19,9 L24,9 L19,13 L23,17 L19,13 M12,23 L5,19 L1,23 L5,15 L0,15 L5,11 L1,7 L5,11 M12,23 L19,19 L23,23 L19,15 L24,15 L19,11 L23,7 L19,11',
-      // Elegant curved snowflake
-      'M12,1 L12,23 M12,1 Q8,6 6,8 Q4,10 2,12 Q4,14 6,16 Q8,18 12,23 M12,1 Q16,6 18,8 Q20,10 22,12 Q20,14 18,16 Q16,18 12,23 M12,1 Q9,4 7,6 Q5,8 3,10 Q5,12 7,14 Q9,16 12,23 M12,1 Q15,4 17,6 Q19,8 21,10 Q19,12 17,14 Q15,16 12,23',
-      // Intricate lattice snowflake
-      'M12,1 L13,8 L20,8 L15,13 L20,18 L13,18 L12,23 L11,18 L4,18 L9,13 L4,8 L11,8 Z M12,1 L12,23 M12,1 L6,7 L1,7 L5,11 L1,15 L5,19 L1,23 L6,23 L10,19 L14,19 L18,23 L23,23 L19,19 L23,15 L19,11 L23,7 L18,7 L14,11 L10,11 L6,7 M12,23 L6,17 L1,17 L5,13 L1,9 L5,5 L1,1 L6,1 L10,5 L14,5 L18,1 L23,1 L19,5 L23,9 L19,13 L23,17 L18,17 L14,13 L10,13 L6,17',
-      // Traditional detailed snowflake
-      'M12,1 L12,23 M12,1 L8,5 L4,5 L7,8 L4,11 L7,14 L4,17 L8,17 M12,1 L16,5 L20,5 L17,8 L20,11 L17,14 L20,17 L16,17 M12,23 L8,19 L4,19 L7,16 L4,13 L7,10 L4,7 L8,7 M12,23 L16,19 L20,19 L17,16 L20,13 L17,10 L20,7 L16,7 M12,1 L10,9 L2,9 L6,12 L2,15 L10,15 M12,1 L14,9 L22,9 L18,12 L22,15 L14,15 M12,23 L10,15 L2,15 L6,12 L2,9 L10,9 M12,23 L14,15 L22,15 L18,12 L22,9 L14,9'
-    ];
-    const path = paths[Math.floor(Math.random() * paths.length)];
+  function createSnowflakeSVG(size) {
+    const path = 'M12,1 L13,6 L18,6 L14,10 L16,15 L12,13 L8,15 L10,10 L6,6 L11,6 Z M12,1 L12,23 M12,1 L8,8 L2,8 M12,1 L16,8 L22,8 M12,23 L8,16 L2,16 M12,23 L16,16 L22,16';
     return `<svg width="${size}" height="${size}" viewBox="0 0 24 24">
-      <path d="${path}" fill="none" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" filter="drop-shadow(0 0 2px rgba(255,255,255,0.8))"/>
+      <path d="${path}" fill="none" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`;
   }
 
-  // Generate unique snowflakes
   function createSnowflakes() {
     const container = document.getElementById('snowflakes');
-    const activeSnowflakes = new Set(); // Track active snowflakes to ensure uniqueness
-    
+
     function createSnowflake() {
       const snowflake = document.createElement('div');
       snowflake.className = 'snowflake';
-      
-      // Random size - mix of tiny (2-4px), small (5-10px), medium (11-16px), and large (17-22px) snowflakes
+
       const sizeType = Math.random();
       let size;
-      if (sizeType < 0.4) {
-        // 40% tiny simple snowflakes
-        size = Math.random() * 2 + 2;
-      } else if (sizeType < 0.7) {
-        // 30% small detailed snowflakes
-        size = Math.random() * 5 + 5;
-      } else if (sizeType < 0.9) {
-        // 20% medium ornate snowflakes
-        size = Math.random() * 5 + 11;
-      } else {
-        // 10% large intricate snowflakes
-        size = Math.random() * 5 + 17;
-      }
-      snowflake.style.fontSize = `${size}px`;
-      
-      // Random horizontal position
+      if (sizeType < 0.4) size = Math.random() * 2 + 2;
+      else if (sizeType < 0.7) size = Math.random() * 5 + 5;
+      else if (sizeType < 0.9) size = Math.random() * 5 + 11;
+      else size = Math.random() * 5 + 17;
+
       const left = Math.random() * 100;
       snowflake.style.left = `${left}%`;
-      
-      // Random fall duration (8s to 18s) - faster for more movement
+
       const duration = Math.random() * 10 + 8;
-      
-      // For tiny snowflakes, use simple dots/stars. For larger ones, use ornate SVG or Unicode
+      const delay = Math.random() * 3;
+
       if (size < 5) {
-        // Tiny snowflakes - simple dots or tiny stars
-        snowflake.innerHTML = '<svg width="' + size + '" height="' + size + '" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1" fill="white" opacity="0.9"/></svg>';
+        snowflake.innerHTML = `<svg width="${size}" height="${size}" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1" fill="white" opacity="0.9"/></svg>`;
       } else {
-        // Mix of ornate SVG (70%) and Unicode (30%) for visible snowflakes
-        const useSVG = Math.random() > 0.3;
-        if (useSVG) {
-          snowflake.innerHTML = createSnowflakeSVG(size, 0);
-        } else {
-          // Use beautiful snowflake Unicode character
+        if (Math.random() > 0.3) snowflake.innerHTML = createSnowflakeSVG(size);
+        else {
           const shape = snowflakeShapes[Math.floor(Math.random() * snowflakeShapes.length)];
           snowflake.textContent = shape;
           snowflake.style.fontSize = `${size}px`;
         }
       }
-      
-      // Random delay to stagger appearance (shorter for more continuous flow)
-      const delay = Math.random() * 3;
+
       snowflake.style.animationDelay = `${delay}s`;
-      
-      // Random glisten timing for variety
       const glistenSpeed = 2 + Math.random() * 3;
       snowflake.style.animation = `fall ${duration}s linear ${delay}s infinite, glisten ${glistenSpeed}s ease-in-out ${delay}s infinite`;
-      
-      // Create unique identifier based on shape, position, and time
-      const uniqueId = `${left.toFixed(2)}-${size.toFixed(2)}-${Date.now()}-${Math.random()}`;
-      
-      // Allow more snowflakes for dense snowfall
-      activeSnowflakes.add(uniqueId);
+
       container.appendChild(snowflake);
-      
-      // Remove snowflake after animation completes
-      setTimeout(() => {
-        if (snowflake.parentNode) {
-          snowflake.remove();
-        }
-        activeSnowflakes.delete(uniqueId);
-      }, (duration + delay) * 1000);
+      setTimeout(() => { if (snowflake.parentNode) snowflake.remove(); }, (duration + delay) * 1000);
     }
-    
-    // Create snowflakes continuously - lots of snow for Christmas!
-    setInterval(createSnowflake, 100); // New snowflake every 100ms for dense snowfall
-    
-    // Create multiple initial snowflakes to start immediately
-    for(let i = 0; i < 50; i++) {
-      setTimeout(() => createSnowflake(), i * 50);
-    }
+
+    setInterval(createSnowflake, 100);
+    for (let i = 0; i < 50; i++) setTimeout(createSnowflake, i * 50);
   }
 
-  // Start snowflake generation when page loads
   createSnowflakes();
+
+  // Background music logic
+  (function(){
+    const audio = document.getElementById('bg-music');
+    if (!audio) return;
+
+    // Try silent autoplay (some browsers allow if user has interacted with site before)
+    audio.volume = 0.85;
+    audio.loop = true;
+    audio.play().catch(() => {
+      // If autoplay with sound is blocked, start on first click/tap
+      const resume = () => {
+        audio.play().catch(()=>{});
+        document.removeEventListener('click', resume);
+        document.removeEventListener('touchstart', resume);
+      };
+      document.addEventListener('click', resume);
+      document.addEventListener('touchstart', resume);
+    });
+  })();
 </script>
 </body>
 </html>
