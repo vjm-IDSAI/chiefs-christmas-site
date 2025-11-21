@@ -145,11 +145,27 @@
       }
 
       header {
+        margin-bottom: 32px;
+      }
+
+      .header-bar {
+        background: radial-gradient(circle at top left, #020617 0, #020617 50%, #020617 100%);
+        border-radius: 999px;
+        padding: 10px 18px;
+        border: 1px solid rgba(15, 23, 42, 0.9);
+        box-shadow: var(--shadow-soft);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 32px;
         gap: 16px;
+      }
+
+      @media (max-width: 720px) {
+        .header-bar {
+          flex-direction: column;
+          align-items: flex-start;
+          border-radius: var(--radius-xl);
+        }
       }
 
       .brand-left {
@@ -551,7 +567,7 @@
         margin-bottom: 3px;
       }
 
-      /* UPDATED: no big pill around CTA, just stacked text + button */
+      /* No big pill – just label, button, text */
       .impact-cta-box {
         background: transparent;
         border-radius: 0;
@@ -618,33 +634,37 @@
 
     <div class="page">
       <header>
-        <div class="brand-left">
-          <div class="kc-heart-logo" aria-label="Kansas City heart logo">
-            <span>KC</span>
+        <div class="header-bar">
+          <div class="brand-left">
+            <div class="kc-heart-logo" aria-label="Kansas City heart logo">
+              <span>KC</span>
+            </div>
+            <div>
+              <div class="brand-text-title">Rogue Round Table</div>
+              <div class="brand-text-sub">
+                Winter fundraiser album · Kansas City, MO
+              </div>
+            </div>
           </div>
-          <div>
-            <div class="brand-text-title">Rogue Round Table</div>
-            <div class="brand-text-sub">Winter fundraiser album · Kansas City, MO</div>
-          </div>
-        </div>
 
-        <div class="header-cta">
-          <a
-            class="btn-primary"
-            href="https://givebutter.com/gochiefs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Donate &amp; Get the Album
-          </a>
-          <a
-            class="btn-ghost"
-            href="https://rogueroundtable.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn about Rogue Round Table
-          </a>
+          <div class="header-cta">
+            <a
+              class="btn-primary"
+              href="https://givebutter.com/gochiefs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Donate &amp; Get the Album
+            </a>
+            <a
+              class="btn-ghost"
+              href="https://rogueroundtable.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn about Rogue Round Table
+            </a>
+          </div>
         </div>
       </header>
 
