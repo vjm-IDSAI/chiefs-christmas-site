@@ -145,27 +145,11 @@
       }
 
       header {
-        margin-bottom: 32px;
-      }
-
-      .header-bar {
-        background: radial-gradient(circle at top left, #020617 0, #020617 50%, #020617 100%);
-        border-radius: 999px;
-        padding: 10px 18px;
-        border: 1px solid rgba(15, 23, 42, 0.9);
-        box-shadow: var(--shadow-soft);
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 32px;
         gap: 16px;
-      }
-
-      @media (max-width: 720px) {
-        .header-bar {
-          flex-direction: column;
-          align-items: flex-start;
-          border-radius: var(--radius-xl);
-        }
       }
 
       .brand-left {
@@ -287,7 +271,7 @@
         }
       }
 
-      /* Hero / description card */
+      /* Cards */
 
       .card {
         background: radial-gradient(circle at top, #0b1220 0, var(--bg-card) 42%);
@@ -338,7 +322,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 12px 18px;
-        margin-top: 16px;
+        margin-top: 12px;
         font-size: 12px;
         color: var(--text-muted);
       }
@@ -381,6 +365,62 @@
 
       .hero-body li {
         margin-bottom: 4px;
+      }
+
+      /* HERO GRID – album art + copy */
+
+      .hero-main {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 20px;
+        margin-top: 18px;
+        align-items: stretch;
+      }
+
+      @media (max-width: 720px) {
+        .hero-main {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+
+      .hero-album {
+        background: radial-gradient(circle at top, #111827 0, #020617 70%);
+        border-radius: 1rem;
+        padding: 10px;
+        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(15, 23, 42, 0.95);
+        max-width: 260px;
+      }
+
+      .hero-album img {
+        width: 100%;
+        border-radius: 0.9rem;
+        display: block;
+      }
+
+      .hero-album-caption {
+        margin-top: 8px;
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      .hero-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: space-between;
+      }
+
+      .hero-cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 8px;
+      }
+
+      .hero-cta-note {
+        font-size: 11px;
+        color: var(--text-muted);
       }
 
       /* Tracklist */
@@ -567,22 +607,16 @@
         margin-bottom: 3px;
       }
 
-      /* No big pill – just label, button, text */
       .impact-cta-box {
+        /* remove big pill outline */
         background: transparent;
         border-radius: 0;
         border: none;
         padding: 0;
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 8px;
         align-items: flex-start;
-      }
-
-      @media (max-width: 880px) {
-        .impact-cta-box {
-          align-items: stretch;
-        }
       }
 
       .impact-cta-label {
@@ -596,7 +630,6 @@
       }
 
       .impact-cta-box .btn-primary {
-        width: 100%;
         justify-content: center;
       }
 
@@ -634,42 +667,38 @@
 
     <div class="page">
       <header>
-        <div class="header-bar">
-          <div class="brand-left">
-            <div class="kc-heart-logo" aria-label="Kansas City heart logo">
-              <span>KC</span>
-            </div>
-            <div>
-              <div class="brand-text-title">Rogue Round Table</div>
-              <div class="brand-text-sub">
-                Winter fundraiser album · Kansas City, MO
-              </div>
-            </div>
+        <div class="brand-left">
+          <div class="kc-heart-logo" aria-label="Kansas City heart logo">
+            <span>KC</span>
           </div>
+          <div>
+            <div class="brand-text-title">Rogue Round Table</div>
+            <div class="brand-text-sub">Winter fundraiser album · Kansas City, MO</div>
+          </div>
+        </div>
 
-          <div class="header-cta">
-            <a
-              class="btn-primary"
-              href="https://givebutter.com/gochiefs"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Donate &amp; Get the Album
-            </a>
-            <a
-              class="btn-ghost"
-              href="https://rogueroundtable.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn about Rogue Round Table
-            </a>
-          </div>
+        <div class="header-cta">
+          <a
+            class="btn-primary"
+            href="https://givebutter.com/gochiefs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Donate &amp; Get the Album
+          </a>
+          <a
+            class="btn-ghost"
+            href="https://rogueroundtable.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn about Rogue Round Table
+          </a>
         </div>
       </header>
 
       <main>
-        <!-- LEFT: WHAT / WHY -->
+        <!-- LEFT: HERO + WHY -->
         <section>
           <div class="card">
             <div class="badge">
@@ -691,43 +720,79 @@
               <span>All funds stay in the Kansas City metro</span>
             </div>
 
-            <div class="hero-body">
-              <h3 class="hero-section-title">What it is</h3>
-              <p>
-                <strong>We Want a Chiefs Christmas</strong> is a 13-track holiday
-                album (plus Jazz &amp; Vault bonus tracks) created by Kansas City
-                locals in partnership with Rogue Round Table. It’s our way of saying
-                “thank you” to a community that always shows up when neighbors are
-                struggling.
-              </p>
+            <!-- HERO GRID: album art + core copy + CTA -->
+            <div class="hero-main">
+              <div class="hero-album">
+                <img
+                  src="We Want A Chiefs Christmas Images/chiefs-album-cover-title.png"
+                  alt="We Want a Chiefs Christmas album cover with KC fan signs"
+                />
+                <div class="hero-album-caption">
+                  Official fundraiser cover — We Want a Chiefs Christmas.
+                </div>
+              </div>
 
-              <h3 class="hero-section-title">Why we made it</h3>
-              <p>
-                KC is overflowing with food drives and generosity — but frontline
-                teams are still seeing critical gaps:
-              </p>
-              <ul>
-                <li>Fresh food arriving spoiled or unusable.</li>
-                <li>Pantries running out of meat, dairy, and formula.</li>
-                <li>No soft foods for unhoused neighbors or folks without teeth.</li>
-                <li>School snack programs stretched past capacity.</li>
-              </ul>
-              <p>
-                This album turns KC fandom into flexible funding so partners can buy
-                exactly what’s missing — in real time — and get it into homes the
-                same day.
-              </p>
+              <div class="hero-copy">
+                <div>
+                  <h3 class="hero-section-title">What this album is</h3>
+                  <p class="hero-body">
+                    <strong>We Want a Chiefs Christmas</strong> is a 13-track holiday
+                    album (plus Jazz &amp; Vault bonus tracks) created by Kansas City
+                    locals in partnership with Rogue Round Table. It’s our way of
+                    saying “thank you” to a community that always shows up when
+                    neighbors are struggling.
+                  </p>
 
-              <h3 class="hero-section-title">How it works</h3>
-              <p>
-                You donate once on GiveButter. Rogue Round Table uses those funds to
-                support KC pantries, outreach teams, and emergency needs. As a
-                thank-you, we send you the full digital album, including all bonus
-                tracks.
-              </p>
+                  <h3 class="hero-section-title">Why we made it</h3>
+                  <p class="hero-body">
+                    KC is overflowing with food drives and generosity — but frontline
+                    teams are still seeing critical gaps:
+                  </p>
+                  <ul class="hero-body">
+                    <li>Fresh food arriving spoiled or unusable.</li>
+                    <li>Pantries running out of meat, dairy, and formula.</li>
+                    <li>No soft foods for unhoused neighbors or folks without teeth.</li>
+                    <li>School snack programs stretched past capacity.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div class="hero-section-title">How it works</div>
+                  <p class="hero-body">
+                    You donate once on GiveButter. Rogue Round Table uses those funds
+                    to support KC pantries, outreach teams, and emergency needs. As a
+                    thank-you, we send you the full digital album — including all
+                    bonus tracks.
+                  </p>
+
+                  <div class="hero-cta-row">
+                    <a
+                      class="btn-primary"
+                      href="https://givebutter.com/gochiefs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Donate on GiveButter
+                    </a>
+                    <a
+                      class="btn-ghost"
+                      href="https://rogueroundtable.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      How the fundraiser works
+                    </a>
+                  </div>
+                  <div class="hero-cta-note">
+                    One donation per household is all it takes — we’ll send your album
+                    download by email after you give.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
+          <!-- WHY / IMPACT DETAIL -->
           <div class="card section">
             <div class="section-title-row">
               <div>
